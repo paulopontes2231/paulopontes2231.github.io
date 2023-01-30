@@ -1,0 +1,51 @@
+@import '../../../styles.scss';
+
+.header {
+    background-color: $base-dark;
+    height: 66px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p{
+    color: white;
+    font: 16px "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 23px;
+    margin: 0px;
+    vertical-align: center;
+}
+
+.img{
+    width: fit-content;
+    max-width: fit-content;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+a{
+    font: 16px "Jost", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 23px;
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+
+    :hover{
+        color: $base-gold;
+        text-decoration: underline;
+    }
+}
