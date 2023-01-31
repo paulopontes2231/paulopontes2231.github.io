@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { SkillsetComponent } from './components/skillset/skillset.component';
+import { RecentProjectsComponent } from './components/recent-projects/recent-projects.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SkillsetComponent } from './components/skillset/skillset.component';
     FooterComponent,
     LandingComponent,
     SkillsetComponent,
+    RecentProjectsComponent,
   ],
   imports: [
     BrowserModule,

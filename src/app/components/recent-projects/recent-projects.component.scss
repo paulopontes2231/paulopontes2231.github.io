@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+:host {
+    display:block;
+    background-color: $base-dark;   
+}
+
+.title{
+    width: fit-content;
+    color: $base-gold;
+    margin-inline: auto;
+    padding-top: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cartolina{
+    height: 410px;
+    max-width: 364px;
+    color: $base-gold;
+    border-radius: 4px;
+    margin: 10px 15px;
+    transition: 200ms transform ease-in-out;
+}
+
+.cartolina:hover{
+    transform: scale(1.05);
+}
+
+.image{
+    height: 200px;
+    width: 364px;
+}
+
+h6{
+    font-size: 1.4rem;
+}
+
+.carddescription{
+    color: white;
+}
+
+.button{
+    margin-top: 15px;
+    color: white;
+    border: 2px solid;
+    padding: 10px 25px;
+    border-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 100ms color ease-in-out;
+}
+
+.button:hover{
+    color: $base-gold;
+    border-color: $base-gold;
+}
+
+.subtitle{
+    width: fit-content;
+    color: $base-light;
+    margin-inline: auto;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+    margin-top: -40px;
+    padding-bottom: 20px;
+}
+
+.cardtitle{
+    margin-top: 5px;
+}
