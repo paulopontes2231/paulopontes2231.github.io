@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
+import { SkillsetComponent } from './components/skillset/skillset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    SkillsetComponent,
   ],
   imports: [
     BrowserModule,

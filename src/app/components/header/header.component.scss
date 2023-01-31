@@ -1,6 +1,12 @@
 @import '../../../styles.scss';
 
+:host {
+    display:block;
+    background-color: $base-dark;   
+}
+
 .header {
+    display: block;
     background-color: $base-dark;
     height: 66px;
     width: 100%;

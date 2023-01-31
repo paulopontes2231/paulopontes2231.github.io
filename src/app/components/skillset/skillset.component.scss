@@ -1,0 +1,73 @@
+@import '../../../styles.scss';
+
+:host {
+    display:block;
+    background-color: $base-dark;
+    margin-bottom: 30px;  
+    padding-bottom: 40px; 
+}
+
+.title{
+    width: fit-content;
+    color: $base-gold;
+    margin-inline: auto;
+    padding-top: 40px;
+    font-weight: 700;
+}
+
+.subtitle{
+    width: fit-content;
+    color: $base-light;
+    margin-inline: auto;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+
+}
+
+.logo{
+    width: 85px;
+    height: 85px;
+    display: block;
+    background-color: $base-color;
+    border-radius: 50px;
+}
+
+.left{
+    margin-left: 50px;
+}
+
+.down{
+    margin-top: 40px;
+    
+}
+
+.top{
+    margin-top: 30px;
+}
+
+.image{
+    height: 50px;
+    margin-left: 18px;
+    margin-top: 17px;
+}
+
+.text{
+    color: $base-gold;
+    max-height: fit-content;
+    height: fit-content;
+    width: fit-content;
+    max-width: fit-content;
+}
+
+.area{
+    color: $base-gold;
+    font-size: small;
+    font-weight: 500;
+    margin-top: 45px;
+}
+
+.specifics{
+    color: white;
+    margin-top: 10px;
+}
