@@ -1,0 +1,39 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    background-color: $base-dark;
+}
+
+.title{
+    width: fit-content;
+    color: white;
+    margin-inline: auto;
+    padding-top: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.text{
+    width: fit-content;
+    color: $base-light;
+    margin-inline: auto;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-inline: auto;
+    color: $base-light;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.icon:hover{
+    color: $base-gold;
+}

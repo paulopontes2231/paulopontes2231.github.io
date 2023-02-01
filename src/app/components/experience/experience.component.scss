@@ -1,0 +1,64 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    background-color: $base-color;
+}
+
+.title {
+    width: fit-content;
+    color: $base-gold;
+    margin-inline: auto;
+    padding-top: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cartolina {
+    background-color: $base-dark;
+    width: 270px;
+    height: 300px;
+}
+
+.image {
+    width: 240px;
+    margin-top: 20px;
+}
+
+.img {
+    margin-inline: auto;
+    width: fit-content;
+}
+
+.cardTitle {
+    color: $base-gold;
+    font-weight: 600;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.cardJob {
+    color: white;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+.cardTechnologies {
+    color: white;
+    width: 220px;
+    margin-inline: auto;
+    margin-top: 25px;
+    font-weight: 600;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.cardDates {
+    color: $base-light;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 15px;
+}

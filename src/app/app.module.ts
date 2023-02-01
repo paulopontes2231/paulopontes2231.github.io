@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { SkillsetComponent } from './components/skillset/skillset.component';
 import { RecentProjectsComponent } from './components/recent-projects/recent-projects.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RecentProjectsComponent } from './components/recent-projects/recent-pro
     LandingComponent,
     SkillsetComponent,
     RecentProjectsComponent,
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
