@@ -21,6 +21,9 @@
                 style="width: fit-content; max-width: 200px;">{{options[3]}}</button>
         </div>
         <br>
+        <div *ngIf="bonus == true" class="row" style="margin-inline: auto; width: fit-content;">
+            <p class="answer">🔥 Bonus Round 🔥 Double Points 🔥</p>
+        </div>
         <div class="row" style="margin-inline: auto; width: fit-content;">
             <p class="answer">{{correct}}</p>
         </div>
