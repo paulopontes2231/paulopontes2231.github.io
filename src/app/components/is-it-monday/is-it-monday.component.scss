@@ -1,0 +1,130 @@
+@import '../../../styles.scss';
+
+
+:host {
+    display: block;
+    background-color: $base-color;
+}
+
+.date {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.answer {
+    margin-left: auto;
+    margin-right: auto;
+    color: $base-gold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.answer:hover {
+    text-decoration: none;
+}
+
+.dateCard {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: 145px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: 0px;
+    height: 85px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 41.66666667%;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonOption {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: 0px;
+    height: 85px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+.buttonOption:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.info {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.info:hover {
+    text-decoration: none;
+}
+
+.title {
+    width: fit-content;
+    color: white;
+    margin-inline: auto;
+    padding-top: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.text {
+    width: fit-content;
+    color: $base-light;
+    margin-inline: auto;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-inline: auto;
+    color: $base-light;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.icon:hover {
+    color: $base-gold;
+}
+
+.footer {
+    background-color: $base-dark;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
