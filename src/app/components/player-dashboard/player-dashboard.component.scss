@@ -1,0 +1,190 @@
+@import '../../../styles.scss';
+
+app-player-dashboard{
+    display: flex;
+}
+
+th {
+    color: white;
+}
+
+td {
+    background-color: $base-dark;
+    text-align: center;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+th:last-child {
+    max-width: 40px;
+}
+
+td:last-child {
+    max-width: 40px;
+}
+
+.mat-table {
+    background-color: $base-dark;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+}
+
+.detailButton {
+    background-color: #1e425a;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border: 0px;
+    height: 20px;
+}
+
+.detailButton:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+    color: $base-gold;
+}
+
+
+/* mat-paginator {
+    color: white;
+}
+
+mat-icon-buton:hover {
+    color: $base-gold !important;
+    background-color: transparent;
+} */
+
+
+.filter {
+    margin-bottom: 20px;
+    background-color: $base-color;
+    color: white;
+    border-bottom: 1px white;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    vertical-align: baseline;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: .16px;
+    border-radius: 0;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    width: 300px;
+    height: 40px;
+    border-width: 0px 0px 1px 0;
+    border-style: solid dotted solid double;
+    border-color: #f00 #0f0 white #ff0;
+    padding: 0 16px;
+    transition: background-color 70ms cubic-bezier(.2, 0, .38, .9), outline 70ms cubic-bezier(.2, 0, .38, .9);
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+::ng-deep .mat-mdc-paginator-icon:not(.mat-form-field-disabled) {
+    fill: white !important;
+}
+
+::ng-deep .mat-mdc-paginator :not(.mat-form-field-disabled) {
+    color: white !important;
+    border: 11px white;
+}
+
+::ng-deep .mat-select-panel .mat-option.mat-selected {
+    color: white;
+}
+
+
+::ng-deep .mat-mdc-paginator-page-size-select {
+    color: white;
+    border-color: white;
+    width: 60px !important;
+}
+
+:host {
+    display: block;
+    background-color: $base-color;
+    height: 100vh;
+}
+
+.button {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border: 0px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+    color: $base-gold;
+}
+
+.info {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.info:hover {
+    text-decoration: none;
+}
+
+.title {
+    width: fit-content;
+    color: white;
+    margin-inline: auto;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.text {
+    width: fit-content;
+    color: $base-light;
+    margin-inline: auto;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-inline: auto;
+    color: $base-light;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.icon:hover {
+    color: $base-gold;
+}
+
+.footer {
+    background-color: $base-dark;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    align-self: flex-end;
+}

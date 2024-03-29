@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,6 +14,11 @@ import { IsItMondayComponent } from './components/is-it-monday/is-it-monday.comp
 import { HomeComponent } from './home/home.component';
 import { PlayerRaterComponent } from './components/player-rater/player-rater.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
+import { PlayerDashboardComponent } from './components/player-dashboard/player-dashboard.component';
+import { PlayerDashboardDetailComponent } from './components/player-dashboard/player-dashboard-detail/player-dashboard-detail.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -28,11 +33,16 @@ import { InstructionsComponent } from './components/instructions/instructions.co
     HomeComponent,
     PlayerRaterComponent,
     InstructionsComponent,
+    PlayerDashboardComponent,
+    PlayerDashboardDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    MatTableModule,
+    MatPaginatorModule,
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
