@@ -12,6 +12,8 @@ import { RecentProjectsComponent } from './components/recent-projects/recent-pro
 import { ExperienceComponent } from './components/experience/experience.component';
 import { IsItMondayComponent } from './components/is-it-monday/is-it-monday.component';
 import { HomeComponent } from './home/home.component';
+import { PlayerRaterComponent } from './components/player-rater/player-rater.component';
+import { InstructionsComponent } from './components/instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HomeComponent } from './home/home.component';
     ExperienceComponent,
     IsItMondayComponent,
     HomeComponent,
+    PlayerRaterComponent,
+    InstructionsComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,8 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { IsItMondayComponent } from './components/is-it-monday/is-it-monday.component';
 import { HomeComponent } from './home/home.component';
+import { PlayerRaterComponent } from './components/player-rater/player-rater.component';
 
-const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: '',component: HomeComponent}];
+const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: '',component: HomeComponent},
+                        { path: 'playerRater', component: PlayerRaterComponent}
+                       ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
