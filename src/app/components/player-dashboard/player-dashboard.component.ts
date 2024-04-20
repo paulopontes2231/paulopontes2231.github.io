@@ -23,12 +23,12 @@ export class PlayerDashboardComponent implements OnInit {
   pageSizeOptions = [5, 10]
   fileToUpload: File | null = null;
 
-  dataSource = new MatTableDataSource<Player>(this.players)
+  dataSource = new MatTableDataSource<any>(this.players)
   displayedColumns = ['name', 'club', 'age', 'price', 'position', 'bestRating', 'totalAttributes', 'actions'];
 
   @ViewChild('fileInput') el!: ElementRef;
-  @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort!: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator!: MatPaginator;
 
   constructor(
     private router: Router,
@@ -37,44 +37,6 @@ export class PlayerDashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-/*     this.playerService.getPlayers()
- */    this.playerService.playersChanged.subscribe(
-    (data: Player[]) => {
-      /*  this.dataSource.data = data; */
-    }
-  )
-    this.playerService.refreshPlayersList()
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 20, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 21, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data.push(new Player("Zé", "FC Porto", "RW", 19, "10M", "18", 12, 16, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1))
-    this.dataSource.data[0].ratings = [{ position: "IF", rating: 19 }, { position: "CWB", rating: 18 }, { position: "MEZ", rating: 20 }]
-
   }
 
   ngAfterViewInit() {
@@ -102,8 +64,11 @@ export class PlayerDashboardComponent implements OnInit {
       if (this.el.nativeElement.files[0].type != "text/csv") {
         return console.log("ERRO")
       }
-      console.log(e.target.result)
-      //enviar para o backend
+      this.playerService.postPlayerList(e.target.result).subscribe((res: any) => {
+        this.players = (res.body)       
+        this.dataSource.data = this.players
+        this.ngAfterViewInit()
+      })
     }
     fileReader.readAsText(this.el.nativeElement.files[0]);
   }
@@ -146,30 +111,33 @@ export class PlayerDashboardComponent implements OnInit {
     }
 
     return row.ratings.reduce((maxPlayer: any, currentPlayer: any) => {
-      return currentPlayer.rating > maxPlayer.rating ? currentPlayer : maxPlayer;
+      return parseFloat(currentPlayer.rating) > parseFloat(maxPlayer.rating) ? currentPlayer : maxPlayer;
     });
   }
 
-  getTotalAttributes(row: any) {
+  getTotalAttributes(row: Player) {
     row.bestRating = this.getBestRating(row).rating
-    row.totalAttributes = row.corners + row.crossing + row.dribbling + row.finishing +
-      row.firstTouch + row.freeKick + row.heading + row.longShots +
-      row.longThrows + row.marking + row.passing + row.penaltyTaking +
-      row.tackling + row.technique + row.aggression + row.anticipation +
-      row.bravery + row.composure + row.concentration + row.decisions +
-      row.determination + row.flair + row.leadership + row.offBall +
-      row.positioning + row.teamWork + row.vision + row.workRate +
-      row.acceleration + row.agility + row.balance + row.jumpingReach +
-      row.naturalFitness + row.pace + row.stamina + row.strength
-    return row.corners + row.crossing + row.dribbling + row.finishing +
-      row.firstTouch + row.freeKick + row.heading + row.longShots +
-      row.longThrows + row.marking + row.passing + row.penaltyTaking +
-      row.tackling + row.technique + row.aggression + row.anticipation +
-      row.bravery + row.composure + row.concentration + row.decisions +
-      row.determination + row.flair + row.leadership + row.offBall +
-      row.positioning + row.teamWork + row.vision + row.workRate +
-      row.acceleration + row.agility + row.balance + row.jumpingReach +
-      row.naturalFitness + row.pace + row.stamina + row.strength
+    row.totalAttributes = +row.corners + +row.crossing + +row.dribbling + +row.finishing +
+      +row.firstTouch + +row.freeKick + +row.heading + +row.longShots +
+      +row.longThrows + +row.marking + +row.passing + +row.penaltyTaking +
+      +row.tackling + +row.technique + +row.aggression + +row.anticipation +
+      +row.bravery + +row.composure + +row.concentration + +row.decisions +
+      +row.determination + +row.flair + +row.leadership + +row.offBall +
+      +row.positioning + +row.teamWork + +row.vision + +row.workRate +
+      +row.acceleration + +row.agility + +row.balance + +row.jumpingReach +
+      +row.naturalFitness + +row.pace + +row.stamina + +row.strength
+
+
+    return row.totalAttributes = +row.corners + +row.crossing + +row.dribbling + +row.finishing +
+      +row.firstTouch + +row.freeKick + +row.heading + +row.longShots +
+      +row.longThrows + +row.marking + +row.passing + +row.penaltyTaking +
+      +row.tackling + +row.technique + +row.aggression + +row.anticipation +
+      +row.bravery + +row.composure + +row.concentration + +row.decisions +
+      +row.determination + +row.flair + +row.leadership + +row.offBall +
+      +row.positioning + +row.teamWork + +row.vision + +row.workRate +
+      +row.acceleration + +row.agility + +row.balance + +row.jumpingReach +
+      +row.naturalFitness + +row.pace + +row.stamina + +row.strength
+
   }
 
 }

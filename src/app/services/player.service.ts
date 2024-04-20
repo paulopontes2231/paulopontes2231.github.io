@@ -8,7 +8,7 @@ import { Player } from "../entities/player";
 @Injectable({ providedIn: 'root' })
 export class PlayerService {
 
-    playersChanged = new Subject<Player[]>();
+    playersChanged = new Subject<any>();
     responseData: any = ''
 
     baseURL = 'http://localhost:3000/player/'
@@ -20,7 +20,7 @@ export class PlayerService {
     ) { }
 
     postPlayerList(text: any) {
-        this.http.post(this.baseURL, text, { observe: 'response', responseType: 'text' })
+        return this.http.post(this.baseURL, {text:text}, { observe: 'response', responseType: 'json' })
     }
 
     openSnackBar() {
