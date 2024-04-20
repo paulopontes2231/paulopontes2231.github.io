@@ -1,7 +1,8 @@
 @import '../../../styles.scss';
 
-app-player-dashboard{
-    display: flex;
+.container {
+    min-height: calc(100vh - 66px);
+    width: 100%;
 }
 
 th {
@@ -17,11 +18,11 @@ td {
 }
 
 th:last-child {
-    max-width: 40px;
+    max-width: 55px;
 }
 
 td:last-child {
-    max-width: 40px;
+    max-width: 55px;
 }
 
 .mat-table {
@@ -48,17 +49,6 @@ td:last-child {
     cursor: pointer;
     color: $base-gold;
 }
-
-
-/* mat-paginator {
-    color: white;
-}
-
-mat-icon-buton:hover {
-    color: $base-gold !important;
-    background-color: transparent;
-} */
-
 
 .filter {
     margin-bottom: 20px;
@@ -188,3 +178,70 @@ mat-icon-buton:hover {
     width: 100%;
     align-self: flex-end;
 }
+
+.big {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+
+    :host {
+        display: block;
+        background-color: $base-dark;
+    }
+
+    .title {
+        width: fit-content;
+        color: white;
+        margin-inline: auto;
+        padding-top: 10px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        width: fit-content;
+        color: $base-light;
+        margin-inline: auto;
+        font-weight: 500;
+        font-size: 0.9rem;
+        justify-content: center;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin-inline: auto;
+        color: $base-light;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .icon:hover {
+        color: $base-gold;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.label {
+    align-content: space-around;
+    text-align: center;
+    width: 145px;
+}
+
+::ng-deep .mat-sort-header-container {
+    display:flex;
+    justify-content:center;
+  }

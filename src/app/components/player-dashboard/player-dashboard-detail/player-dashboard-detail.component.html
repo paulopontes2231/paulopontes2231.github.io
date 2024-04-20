@@ -1,1 +1,405 @@
-<p>player-dashboard-detail works!</p>
+<div class="row main-row" >
+    <div class="col col-bio">
+        <div class="row row-bio">
+            Name: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.name}} 
+        </div>
+        <div class="row row-bio">
+            Age: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.age}}
+        </div>
+        <div class="row row-bio">
+            Club: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.club}}
+        </div>
+        <div class="row row-bio">
+            Position: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.position}}
+        </div>
+        <div class="row row-bio">
+            Price: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.price}}
+        </div>
+        <div class="row row-bio">
+            Scout's Report: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.scouting}}
+        </div>
+        <div class="row row-bio">
+            Total Attributes: 
+        </div>
+        <div class="row row-bio answer">
+            {{data.totalAttributes}}
+        </div>
+    </div>
+
+    <!-- Técnicos -->
+    <div class="col col-atributos">
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Corners
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.corners <= 10, 'atributo-valor-creme': data.corners > 10 && data.corners < 16, 'atributo-valor-gold': data.corners >= 16 }">
+                {{data.corners}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Crossing
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.crossing <= 10, 'atributo-valor-creme': data.crossing > 10 && data.crossing < 16, 'atributo-valor-gold': data.crossing >= 16 }">
+                {{data.crossing}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Dribbling
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.dribbling <= 10, 'atributo-valor-creme': data.dribbling > 10 && data.dribbling < 16, 'atributo-valor-gold': data.dribbling >= 16 }">
+                {{data.dribbling}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Finishing
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.finishing <= 10, 'atributo-valor-creme': data.finishing > 10 && data.finishing < 16, 'atributo-valor-gold': data.finishing >= 16 }">
+                {{data.finishing}}
+            </div>
+        </div>
+        
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                First Touch
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.firstTouch <= 10, 'atributo-valor-creme': data.firstTouch > 10 && data.firstTouch < 16, 'atributo-valor-gold': data.firstTouch >= 16 }">
+                {{data.firstTouch}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Free Kick Taking
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.freeKick <= 10, 'atributo-valor-creme': data.freeKick > 10 && data.freeKick < 16, 'atributo-valor-gold': data.freeKick >= 16 }">
+                {{data.freeKick}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Heading
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.heading <= 10, 'atributo-valor-creme': data.heading > 10 && data.heading < 16, 'atributo-valor-gold': data.heading >= 16 }">
+                {{data.heading}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Long Shots
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.longShots <= 10, 'atributo-valor-creme': data.longShots > 10 && data.longShots < 16, 'atributo-valor-gold': data.longShots >= 16 }">
+                {{data.longShots}}
+            </div>
+        </div>
+
+
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Long Throws
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.longThrows <= 10, 'atributo-valor-creme': data.longThrows > 10 && data.longThrows < 16, 'atributo-valor-gold': data.longThrows >= 16 }">
+                {{data.longThrows}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Marking
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.marking <= 10, 'atributo-valor-creme': data.marking > 10 && data.marking < 16, 'atributo-valor-gold': data.marking >= 16 }">
+                {{data.marking}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Passing
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.passing <= 10, 'atributo-valor-creme': data.passing > 10 && data.passing < 16, 'atributo-valor-gold': data.passing >= 16 }">
+                {{data.passing}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Penalty Taking
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.penaltyTaking <= 10, 'atributo-valor-creme': data.penaltyTaking > 10 && data.penaltyTaking < 16, 'atributo-valor-gold': data.penaltyTaking >= 16 }">
+                {{data.penaltyTaking}}
+            </div>
+        </div>
+
+
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Tackling
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.tackling <= 10, 'atributo-valor-creme': data.tackling > 10 && data.tackling < 16, 'atributo-valor-gold': data.tackling >= 16 }">
+                {{data.tackling}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Technique
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.technique <= 10, 'atributo-valor-creme': data.technique > 10 && data.technique < 16, 'atributo-valor-gold': data.technique >= 16 }">
+                {{data.technique}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Mentais -->
+    <div class="col col-atributos">
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Aggression
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.aggression <= 10, 'atributo-valor-creme': data.aggression > 10 && data.aggression < 16, 'atributo-valor-gold': data.aggression >= 16 }">
+                {{data.aggression}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Anticipation
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.anticipation <= 10, 'atributo-valor-creme': data.anticipation > 10 && data.anticipation < 16, 'atributo-valor-gold': data.anticipation >= 16 }">
+                {{data.anticipation}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Bravery
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.bravery <= 10, 'atributo-valor-creme': data.bravery > 10 && data.bravery < 16, 'atributo-valor-gold': data.bravery >= 16 }">
+                {{data.bravery}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Composure
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.composure <= 10, 'atributo-valor-creme': data.composure > 10 && data.composure < 16, 'atributo-valor-gold': data.composure >= 16 }">
+                {{data.composure}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Concentration
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.concentration <= 10, 'atributo-valor-creme': data.concentration > 10 && data.concentration < 16, 'atributo-valor-gold': data.concentration >= 16 }">
+                {{data.concentration}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Decisions
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.decisions <= 10, 'atributo-valor-creme': data.decisions > 10 && data.decisions < 16, 'atributo-valor-gold': data.decisions >= 16 }">
+                {{data.decisions}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Determination
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.determination <= 10, 'atributo-valor-creme': data.determination > 10 && data.determination < 16, 'atributo-valor-gold': data.determination >= 16 }">
+                {{data.determination}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Flair
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.flair <= 10, 'atributo-valor-creme': data.flair > 10 && data.flair < 16, 'atributo-valor-gold': data.flair >= 16 }">
+                {{data.flair}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Leadership
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.leadership <= 10, 'atributo-valor-creme': data.leadership > 10 && data.leadership < 16, 'atributo-valor-gold': data.leadership >= 16 }">
+                {{data.leadership}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Off the Ball
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.offBall <= 10, 'atributo-valor-creme': data.offBall > 10 && data.offBall < 16, 'atributo-valor-gold': data.offBall >= 16 }">
+                {{data.offBall}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Positioning
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.positioning <= 10, 'atributo-valor-creme': data.positioning > 10 && data.positioning < 16, 'atributo-valor-gold': data.positioning >= 16 }">
+                {{data.positioning}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Teamwork
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.teamWork <= 10, 'atributo-valor-creme': data.teamWork > 10 && data.teamWork < 16, 'atributo-valor-gold': data.teamWork >= 16 }">
+                {{data.teamWork}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Vision
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.vision <= 10, 'atributo-valor-creme': data.vision > 10 && data.vision < 16, 'atributo-valor-gold': data.vision >= 16 }">
+                {{data.vision}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Work Rate
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.workRate <= 10, 'atributo-valor-creme': data.workRate > 10 && data.workRate < 16, 'atributo-valor-gold': data.workRate >= 16 }">
+                {{data.workRate}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Físicos + Best Ratings -->
+    <div class="col col-atributos">
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Acceleration
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.acceleration <= 10, 'atributo-valor-creme': data.acceleration > 10 && data.acceleration < 16, 'atributo-valor-gold': data.acceleration >= 16 }">
+                {{data.acceleration}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Agility
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.agility <= 10, 'atributo-valor-creme': data.agility > 10 && data.agility < 16, 'atributo-valor-gold': data.agility >= 16 }">
+                {{data.agility}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Balance
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.balance <= 10, 'atributo-valor-creme': data.balance > 10 && data.balance < 16, 'atributo-valor-gold': data.balance >= 16 }">
+                {{data.balance}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Jumping Reach
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.jumpingReach <= 10, 'atributo-valor-creme': data.jumpingReach > 10 && data.jumpingReach < 16, 'atributo-valor-gold': data.jumpingReach >= 16 }">
+                {{data.jumpingReach}}
+            </div>
+        </div>
+        <!-- A PARTIR DAQUI ESTÃO ERRADOS -->
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Natural Fitness
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.naturalFitness <= 10, 'atributo-valor-creme': data.naturalFitness > 10 && data.naturalFitness < 16, 'atributo-valor-gold': data.naturalFitness >= 16 }">
+                {{data.naturalFitness}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Pace
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.pace <= 10, 'atributo-valor-creme': data.pace > 10 && data.pace < 16, 'atributo-valor-gold': data.pace >= 16 }">
+                {{data.pace}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Stamina
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.stamina <= 10, 'atributo-valor-creme': data.stamina > 10 && data.stamina < 16, 'atributo-valor-gold': data.stamina >= 16 }">
+                {{data.stamina}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Strength
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.strength <= 10, 'atributo-valor-creme': data.strength > 10 && data.strength < 16, 'atributo-valor-gold': data.strength >= 16 }">
+                {{data.strength}}
+            </div>
+        </div>
+
+
+        <div class="row row-atributos">
+            <div class="col atributo-nome" style="color: transparent;">
+                
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.corners <= 10, 'atributo-valor-creme': data.corners > 10 && data.corners < 16, 'atributo-valor-gold': data.corners >= 16 }" style="color: transparent;">
+                
+            </div>
+        </div>
+
+
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Best Ratings
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                Position
+            </div>
+            <div class="atributo-valor-gold">
+                Rating
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                {{data.ratings[0].position}}
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.ratings[0].rating <= 10, 'atributo-valor-creme': data.ratings[0].rating > 10 && data.ratings[0].rating, 'atributo-valor-gold': data.ratings[0].rating >= 16 }">
+                {{data.ratings[0].rating}}
+            </div>
+        </div>
+
+
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                {{data.ratings[1].position}}
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.ratings[1].rating <= 10, 'atributo-valor-creme': data.ratings[1].rating > 10 && data.ratings[1].rating< 16, 'atributo-valor-gold': data.ratings[1].rating >= 16 }">
+                {{data.ratings[1].rating}}
+            </div>
+        </div>
+        <div class="row row-atributos">
+            <div class="col atributo-nome">
+                {{data.ratings[2].position}}
+            </div>
+            <div [ngClass]="{'atributo-valor-branco': data.ratings[2].rating <= 10, 'atributo-valor-creme': data.ratings[2].rating > 10 && data.ratings[2].rating < 16, 'atributo-valor-gold': data.ratings[2].rating >= 16 }">
+                {{data.ratings[2].rating}}
+            </div>
+        </div>
+    </div>
+</div>

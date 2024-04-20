@@ -1,0 +1,65 @@
+@import '../../../../styles.scss';
+
+::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: #1A2F3D;
+    ;
+}
+
+.main-row {
+    height: calc(95%);
+    width: calc(100%);
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.col-bio {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row-bio {
+    margin-left: 10px;
+    flex: 1;
+    color: whitesmoke
+}
+
+
+.col-atributos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row-atributos {
+    flex: 1;
+    color: whitesmoke
+}
+
+.atributo-nome {
+    max-width: fit-content !important;
+    margin-right: auto;
+    color: whitesmoke
+}
+
+.atributo-valor-branco {
+    max-width: fit-content !important;
+    margin-left: auto;
+    color: whitesmoke;
+}
+
+.atributo-valor-creme {
+    max-width: fit-content !important;
+    margin-left: auto;
+    color: #e5cb90;
+}
+
+.atributo-valor-gold {
+    max-width: fit-content !important;
+    margin-left: auto;
+    color: $base-gold;
+}
+
+.answer{
+    color: $base-gold
+}

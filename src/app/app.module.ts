@@ -18,6 +18,8 @@ import { PlayerDashboardComponent } from './components/player-dashboard/player-d
 import { PlayerDashboardDetailComponent } from './components/player-dashboard/player-dashboard-detail/player-dashboard-detail.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatPaginatorModule,
     NgbModule,
+    MatSortModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],

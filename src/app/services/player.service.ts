@@ -15,15 +15,12 @@ export class PlayerService {
     players: Player[] = [];
 
     constructor(
-/*         private http: HttpClient,
- */        private _snackBar: MatSnackBar
+        private http: HttpClient,
+        private _snackBar: MatSnackBar
     ) { }
 
-    insertPlayer(player: any, text: any) {
-      /*   this.http.post(this.baseURL, { player, text }, { observe: 'response', responseType: 'text' }).subscribe(res => {
-            this.responseData = (res.body)
-        }
-        ) */
+    postPlayerList(text: any) {
+        this.http.post(this.baseURL, text, { observe: 'response', responseType: 'text' })
     }
 
     openSnackBar() {
@@ -34,8 +31,8 @@ export class PlayerService {
 
 
     getPlayers() {
-/*         return this.http.get<Player[]>(this.baseURL)
- */    }
+        return this.http.get<Player[]>(this.baseURL)
+    }
 
     refreshPlayersList() {
       /*   this.getPlayers().subscribe((res) => {
