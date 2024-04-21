@@ -1,0 +1,42 @@
+<app-header style="height: 66px;"></app-header>
+<div class="big">
+    <div style="max-width: 1200px; margin-inline: auto; height: fit-content; margin-top: auto;">
+        <div class="row" style="width: 1200px;">
+            <div class="col">
+                <button class="button" (click)="clearAll()">CLEAR ALL</button>
+            </div>
+            <div class="col">
+                <div class="sudoku-grid">
+                    <div class="sudoku-row" *ngFor="let row of sudokuGrid; let i = index">
+                        <ng-container *ngFor="let cell of row; let j = index">
+                            <input *ngIf="sudokuGrid[i][j].value != 0 && cell != 0" 
+                            [ngClass]="{'sudoku-cell-branco': sudokuGrid[i][j].base == false,  'sudoku-cell-gold': sudokuGrid[i][j].base == true }"
+                           type="number" min="1" max="9"
+                                [(ngModel)]="sudokuGrid[i][j].value" #cell [disabled]="allDisabled== true"/>
+                            <input *ngIf="cell == 0" type="number" inputmode="numeric" min="1" max="9" maxlength="1" 
+                                class="sudoku-cell" #cell (keydown)="onKeyDown($event, cell, i,j, cell.value)" [disabled]="allDisabled===true" />
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <button class="button" (click)="solveSudoku()">SOLVE SUDOKU</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <h5 class="title">Follow me on social media</h5>
+        <a href="https://linkedin.com/in/paulo-pontes2231" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+        </a>
+        <p class="text"> Developed by Paulo Pontes. Built with Angular</p>
+    </div>
+</div>

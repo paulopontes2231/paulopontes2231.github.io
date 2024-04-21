@@ -5,9 +5,10 @@ import { IsItMondayComponent } from './components/is-it-monday/is-it-monday.comp
 import { HomeComponent } from './home/home.component';
 import { PlayerRaterComponent } from './components/player-rater/player-rater.component';
 import { PlayerDashboardComponent } from './components/player-dashboard/player-dashboard.component';
+import { SudokuComponent } from './components/sudoku/sudoku.component';
 
 const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: '',component: HomeComponent},
-                        { path: 'playerRater', component: PlayerDashboardComponent}
+                        { path: 'playerRater', component: PlayerDashboardComponent}, { path: 'sudoku-solver', component: SudokuComponent}
                        ];
 
 @NgModule({

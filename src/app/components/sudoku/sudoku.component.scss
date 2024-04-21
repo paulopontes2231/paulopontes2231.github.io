@@ -1,0 +1,145 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    background-color: $base-color;
+}
+
+.footer {
+    background-color: $base-dark;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.big {
+    min-height: calc(100vh - 66px);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+
+    :host {
+        display: block;
+        background-color: $base-dark;
+    }
+
+    .title {
+        width: fit-content;
+        color: white;
+        margin-inline: auto;
+        padding-top: 10px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        width: fit-content;
+        color: $base-light;
+        margin-inline: auto;
+        font-weight: 500;
+        font-size: 0.9rem;
+        justify-content: center;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin-inline: auto;
+        color: $base-light;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .icon:hover {
+        color: $base-gold;
+    }
+}
+
+.sudoku-cell-branco{
+    color: white;
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.sudoku-cell {
+    color: white;
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.sudoku-cell-gold {
+    color: $base-gold;
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.sudoku-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.sudoku-row {
+    display: flex;
+    width: 450px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items along the main axis with equal space between them */
+}
+
+.col {
+    flex: 1;
+    /* Equal width for each column */
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally within the column */
+    align-items: center;
+    /* Center items vertically within the column */
+}

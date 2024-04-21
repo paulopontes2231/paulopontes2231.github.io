@@ -21,7 +21,6 @@ export class PlayerService {
     ) { }
 
     postPlayerList(text: any) {
-        console.log(text)
         return this.http.post(this.baseURL, {text:text}, { observe: 'response', responseType: 'json' })
     }
 

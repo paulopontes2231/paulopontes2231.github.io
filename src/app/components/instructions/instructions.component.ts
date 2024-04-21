@@ -22,7 +22,6 @@ export class InstructionsComponent {
   }
 
   importDefault() {
-    console.log("TESTE")
     this.playerService.getPlayerListDefault().subscribe(res => {
       this.playerService.postPlayerList(res.body).subscribe(res => {
         this.playerService.playerList = res.body

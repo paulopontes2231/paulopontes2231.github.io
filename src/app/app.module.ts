@@ -20,6 +20,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
+import { SudokuComponent } from './components/sudoku/sudoku.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     PlayerRaterComponent,
     InstructionsComponent,
     PlayerDashboardComponent,
-    PlayerDashboardDetailComponent
+    PlayerDashboardDetailComponent,
+    SudokuComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     MatSortModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

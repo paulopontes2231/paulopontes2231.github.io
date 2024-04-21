@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 var cors = require('cors');
 const playersRoute = require("./routes/players");
-/* const sudokuRoute = require("./routes/sudoku"); */
+const sudokuRoute = require("./routes/sudoku");
 
 app.listen(port, () => {
   console.log("App is running on port " + port + "!");
@@ -14,4 +14,4 @@ app.use(express.urlencoded({
   }));
 app.use(express.json());
 app.use('/', playersRoute);
-/* app.use('/', sudokuRoute); */
+app.use('/', sudokuRoute);
