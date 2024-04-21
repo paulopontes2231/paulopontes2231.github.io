@@ -13,7 +13,7 @@ router.get("/player", (req, res) => {
 router.post("/player", (req, res) => {
   let playerList = []
   let csvRecordsArray = req.body.text.split(/\r\n|\n/);
-  for (let i = 0; i < csvRecordsArray.length - 1; i++) {
+  for (let i = 1; i < csvRecordsArray.length - 3; i++) {
     let line = csvRecordsArray[i].split(";");
     let player = new Player(
       line[1].split('- ')[0],

@@ -8,11 +8,19 @@
 </div>
 
 <div class="container">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining <a  href="/assets/PlayerRaterView.fmf" download="PlayerRaterView.fmf">essentially</a> unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+    <p> If you want to do this with the players from your game, you'll have to download this <a  href="/assets/PlayerRaterView.fmf" download="PlayerRaterView.fmf">view</a> in order
+        to use this functionality. After you import this view on the 'Search Player' tab you're ready to start the process.
+        
+        Once you have the list of players you want to rate, you'll need to press Ctrl+A on your keyboard, and when all the players are selected, you'll press Ctrl+P. 
+        After this you'll choose the option 'Web Page'. Then you save the file with a name you want and in a directory you'll have easy access to.
+
+        After saving the file you open this file with Microsoft Excel, or any similar program, then you save the file as "CSV UTF-8". This new file, is the file you'll to upload to 
+        rate the players you selected.
     </p>
+
+    <p>If you want to test this functionality and you don't want to bother yourself with this process, you can import a default list of players by clicking the button below.
+        <br>The results will appear after you click the button and close this pop-up.
+    </p>
+
+    <button [disabled]="disabled==true" class="importButton" (click)="importDefault()">DEFAULT IMPORT</button>
 </div>

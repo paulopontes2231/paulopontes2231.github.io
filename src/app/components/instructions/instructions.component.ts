@@ -1,5 +1,7 @@
-import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Player } from 'src/app/entities/player';
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-instructions',
@@ -8,11 +10,25 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class InstructionsComponent {
 
+  disabled: any
+
   constructor(
     public dialogRef: MatDialogRef<InstructionsComponent>,
-  ) {}
+    public playerService: PlayerService
+  ) { }
 
-  close(){
+  close() {
     this.dialogRef.close()
+  }
+
+  importDefault() {
+    console.log("TESTE")
+    this.playerService.getPlayerListDefault().subscribe(res => {
+      this.playerService.postPlayerList(res.body).subscribe(res => {
+        this.playerService.playerList = res.body
+        this.disabled = true
+      })
+    }
+    )
   }
 }

@@ -87,6 +87,9 @@ export class PlayerDashboardComponent implements OnInit {
     const dialogRef = this.dialog.open(InstructionsComponent, {
     });
     dialogRef.afterClosed().subscribe(result => {
+      this.players = this.playerService.playerList     
+      this.dataSource.data = this.players
+      this.ngAfterViewInit()
     });
   }
 

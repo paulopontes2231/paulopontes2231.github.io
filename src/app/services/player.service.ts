@@ -10,6 +10,7 @@ export class PlayerService {
 
     playersChanged = new Subject<any>();
     responseData: any = ''
+    playerList: any = []
 
     baseURL = 'http://localhost:3000/player/'
     players: Player[] = [];
@@ -20,8 +21,13 @@ export class PlayerService {
     ) { }
 
     postPlayerList(text: any) {
+        console.log(text)
         return this.http.post(this.baseURL, {text:text}, { observe: 'response', responseType: 'json' })
     }
+
+    getPlayerListDefault() {
+        return this.http.get('assets/FMRATER2.csv', { observe: 'response', responseType: 'text' })
+   }
 
     openSnackBar() {
         this._snackBar.open(this.responseData, 'OK', {

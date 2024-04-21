@@ -17,7 +17,7 @@ export class PlayerRaterComponent implements OnInit {
   openInstructions(){
     const dialogConfig= new MatDialogConfig();
     dialogConfig.width = '80%'
-    dialogConfig.height = '450px'
+    dialogConfig.minHeight = '700px'
     dialogConfig.autoFocus = false
     
     const dialogRef = this.dialog.open(InstructionsComponent, {
