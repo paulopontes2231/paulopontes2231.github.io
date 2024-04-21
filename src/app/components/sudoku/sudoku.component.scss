@@ -143,3 +143,24 @@ input::-webkit-inner-spin-button {
     align-items: center;
     /* Center items vertically within the column */
 }
+
+.button {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border: 0px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+    color: $base-gold;
+}
