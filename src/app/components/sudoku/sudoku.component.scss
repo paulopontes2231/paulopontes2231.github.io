@@ -164,3 +164,20 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     color: $base-gold;
 }
+
+/* Add borders to separate subgrids */
+.sudoku-row:nth-child(3n+1) {
+    border-top: 3px solid  $base-light;
+}
+
+.sudoku-row:nth-child(3n) {
+    border-bottom: 3px solid  $base-light;
+}
+
+.sudoku-cell:nth-child(3n+1) {
+    border-left: 3px solid  $base-light;
+}
+
+.sudoku-cell:nth-child(3n) {
+    border-right: 3px solid  $base-light;
+}

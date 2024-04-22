@@ -29,7 +29,7 @@ export class SudokuComponent {
     const inputValue = Number(cell.value);
     const keyCode = event.keyCode;
 
-    if (inputValue != 0 && keyCode != 8 /* keyCode == 8 is BACKSPACE*/) {
+    if (inputValue != 0 && keyCode != 8 /* keyCode == 8 is BACKSPACE so it allows the user to erase a number*/) {
       event.preventDefault()
     } else {
       if (parseInt(event.key) > 0 && parseInt(event.key) < 10) {
