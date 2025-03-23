@@ -1,11 +1,11 @@
 @import '../../../styles.scss';
 
 :host {
-    display:block;
-    background-color: $base-dark;   
+    display: block;
+    background-color: $base-dark;
 }
 
-.title{
+.title {
     width: fit-content;
     color: $base-gold;
     margin-inline: auto;
@@ -14,7 +14,7 @@
     margin-bottom: 40px;
 }
 
-.cartolina{
+.cartolina {
     height: 410px;
     max-width: 364px;
     color: $base-gold;
@@ -23,24 +23,24 @@
     transition: 200ms transform ease-in-out;
 }
 
-.cartolina:hover{
+.cartolina:hover {
     transform: scale(1.05);
 }
 
-.image{
+.image {
     height: 200px;
     width: 364px;
 }
 
-h6{
+h6 {
     font-size: 1.4rem;
 }
 
-.carddescription{
+.carddescription {
     color: white;
 }
 
-.button{
+.button {
     margin-top: 15px;
     color: white;
     border: 2px solid;
@@ -53,12 +53,12 @@ h6{
     transition: 100ms color ease-in-out;
 }
 
-.button:hover{
+.button:hover {
     color: $base-gold;
     border-color: $base-gold;
 }
 
-.subtitle{
+.subtitle {
     width: fit-content;
     color: $base-light;
     margin-inline: auto;
@@ -70,6 +70,48 @@ h6{
     margin-bottom: 0px;
 }
 
-.cardtitle{
+.cardtitle {
     margin-top: 5px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        padding: 0 20px;
+        /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+
+    .container {
+
+        .row {
+
+
+            flex-direction: column;
+            /* Altera a direção dos elementos para empilhá-los verticalmente */
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+        /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+
+    .container {
+
+        .row {
+
+            .cartolina{
+                .img{
+                    display: none;
+                }
+            }
+            flex-direction: column;
+            /* Altera a direção dos elementos para empilhá-los verticalmente */
+        }
+    }
+
+
 }

@@ -63,3 +63,58 @@ li{
         text-decoration: underline;
     }
 }
+
+/* Media queries para dispositivos de tela menores */
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 0 20px; /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+
+    .row {
+        flex-direction: row; /* Altera a direção dos elementos para empilhá-los verticalmente */
+    }
+
+    .name{
+        text-align: left;
+    }
+
+    .col {
+        width: 100%; /* Define a largura para ocupar toda a largura da tela */
+        padding-left: 10px 0; /* Adiciona espaçamento entre os elementos */
+        text-align: left; /* Centraliza o texto */
+    }
+
+    .links {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        padding: 0 20px; /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+
+    .row {
+        flex-direction: row; /* Altera a direção dos elementos para empilhá-los verticalmente */
+    }
+
+    .col {
+        width: 100%; /* Define a largura para ocupar toda a largura da tela */
+        padding-left: 10px 0; /* Adiciona espaçamento entre os elementos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .links {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .name{
+        display: none;
+        
+    }
+
+}

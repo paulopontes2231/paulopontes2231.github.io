@@ -55,11 +55,7 @@ export class SudokuComponent {
       }
     }
     this.allDisabled = true
-    this.sudokuService.postSudoku(this.sudokuGrid).subscribe(res => {
-      if (res != null) {
-        this.sudokuGrid = res.body
-      }
-    })
+    this.sudokuGrid=this.sudokuService.postSudoku(this.sudokuGrid)
   }
 
 }

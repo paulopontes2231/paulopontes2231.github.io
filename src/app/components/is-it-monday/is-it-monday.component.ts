@@ -59,7 +59,7 @@ export class IsItMondayComponent implements OnInit {
 
   generateOptions(index: any) {
     let tempArray = this.daysOfTheWeek
-    let options = [];
+    let options: any = [];
     options.push(this.daysOfTheWeek[index]);
     tempArray.splice(index, 1);
     for (let i = 0; i < 3; i++) {
@@ -100,13 +100,6 @@ export class IsItMondayComponent implements OnInit {
         if(this.bonus == true){
           this.counter++
         }
-        if(this.counter > 3){
-          if(5 < Math.random()*10 && 6 >= Math.random()*10){
-            this.bonus = true
-          }else{
-            this.bonus = false
-          }
-        }
     } else {
       this.correct = "Wrong! It was " + this.findstartswith(DAYS_OF_THE_WEEK, this.correctOption) + "."
         this.counter=0
@@ -114,6 +107,13 @@ export class IsItMondayComponent implements OnInit {
     }
     setTimeout(() => {
       this.ngOnInit()
+      if(this.counter > 3){
+        if(5 < Math.random()*10 && 6 >= Math.random()*10){
+          this.bonus = true
+        }else{
+          this.bonus = false
+        }
+      }
       this.correct = ''
       this.disabled = false
     }, 2000);

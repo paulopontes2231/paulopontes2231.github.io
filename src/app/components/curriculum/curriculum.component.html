@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="container" style="padding-top: 100px; max-width: 1200px;">
+    <div class="row topRow">
+        <div class="col leftcol">
+            <h1 style="margin-right: auto; width: fit-content; margin-left: 0px; text-align: justify;" class="row">Paulo Pontes</h1>
+            <h3 style="margin-right: auto; width: fit-content; margin-left: 0px; text-align: justify;" class="row">Software Engineer</h3>
+        </div>
+        <div class="col midcol">
+            <div class="col hero-img" [ngClass]="{'blur-overlay': isBlurred, 'withoutBlur': !isBlurred}">
+                <img class="image" src="assets/icons/hero-image.png" height="150">
+            </div>
+            <div>
+                <button [ngClass]="{'blur-btn': isBlurred, 'withoutBlur-btn': !isBlurred}"
+                    (click)="toggleBlur()">{{showBlur}}</button>
+            </div>
+        </div>
+        <div class="col rightcol">
+            <p class="contact-info"><span class="emoji">📞</span> +351 916374149</p>
+            <p class="contact-info"><span class="emoji">✉</span> {{email}}</p>
+            <p class="contact-info"><span class="emoji">📍</span> Porto, Portugal</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h2>PROFILE</h2>
+        <p style="text-align: justify;">Proactive and highly adaptable software developer with a strong track record of delivering high-quality
+            solutions. Skilled in collaborating with multidisciplinary teams to design, develop, and implement
+            innovative software solutions, demonstrating autonomy, versatility, and a deep understanding of best
+            practices across various technologies.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <h3>Unit Director - Rover Games</h3>
+        <p>📅 04/2019 - Ongoing 📍 Location</p>
+        <ul>
+            <li>Accelerated outbound sales cycle by 330%...</li>
+            <li>Established strategic partnerships...</li>
+        </ul>
+        <h3>Internal Project Manager - Tesla</h3>
+        <p>📅 04/2012 - 03/2014 📍 Berlin, Germany</p>
+        <ul>
+            <li>Lead a team of developers to build a proprietary CRM system...</li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills">
+            <span>Zoho Sprints</span> <span>UserVoice</span> <span>Amplitude</span> <span>Intercom</span>
+            <span>VWO</span> <span>Taboola</span> <span>Maven</span> <span>Jenkins</span> <span>Hotjar</span>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <p><strong>Bachelor's Degree in Software Engineering</strong> - Instituto Superior de Engenharia do Porto (09/2018 - 09/2022)</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h2>Languages</h2>
+        <p>Portuguese <span class="level">- Fluent</span></p>
+        <p> English <span class="level"> Fluent - C1</span></p>
+        <p>French <span class="level"> Intermediate - B1</span></p>
+        <p>Spanish <span class="level"> Intermediate - B1</span></p>
+    </div>
+
+    
+</div>

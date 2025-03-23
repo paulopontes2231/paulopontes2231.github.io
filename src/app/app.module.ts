@@ -22,6 +22,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { FormsModule } from '@angular/forms';
+import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     InstructionsComponent,
     PlayerDashboardComponent,
     PlayerDashboardDetailComponent,
-    SudokuComponent
+    SudokuComponent,
+    CurriculumComponent
   ],
   imports: [
     BrowserModule,

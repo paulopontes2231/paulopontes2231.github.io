@@ -1,0 +1,114 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    background-color: $base-color;
+    color: white;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.divider {
+    border-top: 2px solid $base-light;
+    margin: 10px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+
+    h2 {
+        color: $base-gold
+    }
+}
+
+.contact-info {
+    text-align: right;
+    margin-left: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background-color: $base-dark;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.blur-overlay {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+    width: fit-content;
+    max-width: fit-content;
+    padding-right: 0px;
+    margin-inline: auto;
+    margin-top: -35px;
+}
+
+.withoutBlur {
+    max-width: fit-content;
+    padding-right: 0px;
+    margin-inline: auto;
+    margin-top: -35px;
+}
+
+/* Button Styling */
+.blur-btn {
+    width: 110PX;
+    font-size: 16px;
+    background-color: $base-light;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 130px;
+    bottom: 80px;
+    opacity: 70%;
+}
+
+.withoutBlur-btn {
+    width: 110PX;
+    font-size: 16px;
+    background-color: $base-light;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 130px;
+    bottom: 80px;
+    opacity: 0%;
+}
+
+.blur-btn:hover {
+    background-color: #95B1D8;
+}
+
+.level{
+    color: $base-light;
+}
+
+@media only screen and (max-width: 400px) {
+    .midcol, .emoji {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .midcol {
+        display: none;
+    }    
+}
+
+@font-face {
+    font-family: NotoColorEmojiLimited;
+    unicode-range: U+1F1E6-1F1FF;
+    src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+  }
