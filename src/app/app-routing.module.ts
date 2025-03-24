@@ -8,9 +8,10 @@ import { PlayerDashboardComponent } from './components/player-dashboard/player-d
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
-const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: '',component: HomeComponent},
+const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: 'main-page',component: HomeComponent},
                         { path: 'playerRater', component: PlayerDashboardComponent}, { path: 'sudoku-solver', component: SudokuComponent},
-                        {path: 'curriculum', component: CurriculumComponent}, {path: 'quoteguesser', component: PlayerDashboardComponent}
+                        {path: 'curriculum', component: CurriculumComponent}, {path: 'quoteguesser', component: PlayerDashboardComponent},
+                        {path: '', redirectTo: 'main-page', pathMatch: 'full'}
                        ];
 
 @NgModule({

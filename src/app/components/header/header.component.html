@@ -5,14 +5,12 @@
                 <a href="/" rel="noopener noreferrer">
                     <img class="image" src="assets/icons/favicon.png"></a>
             </div>
-            <a href="/" class="col name" style="height: fit-content; padding: 0px; margin-top: 14px;"> Paulo Pontes Portfolio</a>
-            <div class="col links" style="max-width: fit-content; margin-top: 14px;">
+            <a href="/" class="col name" style="height: fit-content; padding: 0px; margin-top: 14px; max-width: fit-content;"> Paulo Pontes Portfolio</a>
+            <div class="col links" style="max-width: fit-content; margin-top: 14px; margin-left: auto;" >
                 <ul class="row" style="max-width: fit-content;">
+                    
                     <li class="col">
-                        <a href="/" rel="noopener noreferrer"> Projects</a>
-                    </li>
-                    <li class="col">
-                        <a href="/" rel="noopener noreferrer"> Experience</a>
+                        <a href="#/main-page" rel="noopener noreferrer" *ngIf="showMainPage"> Main Page</a>
                     </li>
                     <!-- <li class="col" style="padding-right: 0px;">
                         <a href="/assets/PauloPontesCV.pdf" rel="noopener noreferrer" target="_blank"> CV</a>

@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-curriculum',
   templateUrl: './curriculum.component.html',
   styleUrl: './curriculum.component.scss'
 })
-export class CurriculumComponent {
+export class CurriculumComponent implements OnInit {
+
+ngOnInit(): void {
+  window.scrollTo(0, 0)
+}
 
   email = "paulopontes2231@gmail.com"
 
