@@ -1,7 +1,7 @@
-<div class="landing">
+<div class="landing" >
     <div class="container">
         <div class="row" style="margin-bottom: 50px; width: 100%; margin-left: 0px; padding-top: 50px;">
-            <div class="col text" style="padding-left: 0px;">
+            <div class="col text" style="padding-left: 0px;" @slideInRight>
                 <h5 class="title">HELLO, I'M PAULO PONTES </h5>
                 <h4 class="subtitle"> Software Engineer</h4>
                 <h5 class="description"> I'm an autonomous and versatile software engineer with proven and tested software
@@ -18,10 +18,10 @@
                     </button>
                 </a>
             </div>
-            <div class="col hero-img" style="width: fit-content; max-width: fit-content; padding-right: 0px;">
+            <div class="col hero-img" style="width: fit-content; max-width: fit-content; padding-right: 0px;" @showState>
                 <img class="image" src="assets/icons/hero-image.png">
             </div>
         </div>
-        <app-skillset></app-skillset>
+        <app-skillset [@slideInLeft]></app-skillset>
     </div>
 </div>
