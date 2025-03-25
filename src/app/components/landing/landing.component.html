@@ -1,27 +1,33 @@
-<div class="landing" >
-    <div class="container">
-        <div class="row" style="margin-bottom: 50px; width: 100%; margin-left: 0px; padding-top: 50px;">
-            <div class="col text" style="padding-left: 0px;" @slideInRight>
-                <h5 class="title">HELLO, I'M PAULO PONTES </h5>
-                <h4 class="subtitle"> Software Engineer</h4>
-                <h5 class="description"> I'm an autonomous and versatile software engineer with proven and tested software
-                    developing skills and experience within multidisciplinary teams.
-                    I'm also a developer who codes applications that <span class="text-highlight"> facilitate users'
-                        experience</span>. I also have <span class="text-highlight">
-                        experience in a wide variety of technologies</span>, and with a lot of eagerness to learn some
-                    more. I commit code to <a class="github" href="https://github.com/paulopontes2231"
-                        target="_blank">Github</a>.
-                </h5>
-                <a href="#recent-projects">
-                    <button class="button">
-                        View Projects
-                    </button>
-                </a>
+
+    <div class="landing">
+        <div class="glass">
+        <div class="container">
+            <div class="row" style="margin-bottom: 50px; width: 100%; margin-left: 0px; padding-top: 50px;">
+                <div class="col text" style="padding-left: 0px;" @slideInRight>
+                    <h5 class="title">HELLO, I'M PAULO PONTES </h5>
+                    <h4 class="subtitle"> Software Engineer</h4>
+                    <h5 class="description"> I'm an autonomous and versatile software engineer with proven and tested
+                        software
+                        developing skills and experience within multidisciplinary teams.
+                        I'm also a developer who codes applications that <span class="text-highlight"> facilitate users'
+                            experience</span>. I also have <span class="text-highlight">
+                            experience in a wide variety of technologies</span>, and with a lot of eagerness to learn
+                        some
+                        more. I commit code to <a class="github" href="https://github.com/paulopontes2231"
+                            target="_blank">Github</a>.
+                    </h5>
+                    <a href="#recent-projects">
+                        <button class="button">
+                            View Projects
+                        </button>
+                    </a>
+                </div>
+                <div class="col hero-img" style="width: fit-content; max-width: fit-content; padding-right: 0px;"
+                    @showState>
+                    <img class="image" src="assets/icons/hero-image.png">
+                </div>
             </div>
-            <div class="col hero-img" style="width: fit-content; max-width: fit-content; padding-right: 0px;" @showState>
-                <img class="image" src="assets/icons/hero-image.png">
-            </div>
+            <app-skillset [@slideInLeft]></app-skillset>
         </div>
-        <app-skillset [@slideInLeft]></app-skillset>
     </div>
 </div>
