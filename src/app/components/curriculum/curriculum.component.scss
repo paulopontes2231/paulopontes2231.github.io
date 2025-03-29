@@ -95,17 +95,17 @@ h2 {
     color: $base-light;
 }
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
     .midcol, .emoji {
         display: none;
     }
-}
+} */
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
     .midcol {
         display: none;
     }    
-}
+} */
 
 @font-face {
     font-family: NotoColorEmojiLimited;

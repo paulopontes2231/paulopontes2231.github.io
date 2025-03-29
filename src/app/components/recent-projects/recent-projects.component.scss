@@ -74,16 +74,14 @@ h6 {
     margin-top: 5px;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
     .container {
         padding: 0 20px;
-        /* Adapta o padding para evitar que os elementos sejam cortados */
     }
 
     .container {
         .row {
             flex-direction: column;
-            /* Altera a direção dos elementos para empilhá-los verticalmente */
         }
     }
 }
@@ -91,13 +89,11 @@ h6 {
 @media only screen and (max-width: 600px) {
     .container {
         padding: 0 20px;
-        /* Adapta o padding para evitar que os elementos sejam cortados */
     }
 
     .container {
         .row {
             flex-direction: column;
-            /* Altera a direção dos elementos para empilhá-los verticalmente */
         }
     }
 }
@@ -109,3 +105,4 @@ h6 {
     }
 }
 
+ */

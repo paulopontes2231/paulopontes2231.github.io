@@ -104,16 +104,14 @@ body{
     border-color: $base-gold;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
     .text {
         padding-left: 0 5px;
-        /* Adapta o padding para evitar que os elementos sejam cortados */
     }
 
     .container {
         .row {
             flex-direction: column;
-            /* Altera a direção dos elementos para empilhá-los verticalmente */
         }
     }
-}
+} */
