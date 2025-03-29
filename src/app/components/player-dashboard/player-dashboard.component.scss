@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 .container {
-    min-height: calc(100vh - 66px);
+    min-height: calc(100dvh - 66px);
     width: 100%;
 }
 
@@ -107,7 +107,7 @@ td:last-child {
 :host {
     display: block;
     background-color: $base-color;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .button {
@@ -220,7 +220,7 @@ input[type="file"] {
 .coat {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .big {
