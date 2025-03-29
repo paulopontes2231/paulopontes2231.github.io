@@ -19,7 +19,7 @@
     max-width: 364px;
     color: $base-gold;
     border-radius: 4px;
-    margin: 10px 15px;
+    margin: 10px 0px;
     transition: 200ms transform ease-in-out;
 }
 
@@ -74,23 +74,18 @@ h6 {
     margin-top: 5px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
     .container {
         padding: 0 20px;
         /* Adapta o padding para evitar que os elementos sejam cortados */
     }
 
     .container {
-
         .row {
-
-
             flex-direction: column;
             /* Altera a direção dos elementos para empilhá-los verticalmente */
         }
     }
-
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -100,18 +95,19 @@ h6 {
     }
 
     .container {
-
         .row {
-
             .cartolina{
-                .img{
-                    display: none;
-                }
             }
             flex-direction: column;
             /* Altera a direção dos elementos para empilhá-los verticalmente */
         }
     }
-
-
 }
+
+@media only screen and (max-width: 365px) {
+    .image {
+        height: 200px;
+        width: 100%;
+    }
+}
+

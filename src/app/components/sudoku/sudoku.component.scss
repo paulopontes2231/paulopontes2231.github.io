@@ -13,18 +13,13 @@
     align-self: flex-end;
 }
 
-.big {
-    min-height: calc(100vh - 66px);
-    display: flex;
-    flex-direction: column;
-}
-
 .footer {
     margin-top: auto;
 
     :host {
         display: block;
         background-color: $base-dark;
+        width: 100%;
     }
 
     .title {
@@ -61,7 +56,7 @@
     }
 }
 
-.sudoku-cell-branco{
+.sudoku-cell-branco {
     color: white;
     width: 50px;
     /* Adjust width as needed */
@@ -167,17 +162,62 @@ input::-webkit-inner-spin-button {
 
 /* Add borders to separate subgrids */
 .sudoku-row:nth-child(3n+1) {
-    border-top: 3px solid  $base-light;
+    border-top: 3px solid $base-light;
 }
 
 .sudoku-row:nth-child(3n) {
-    border-bottom: 3px solid  $base-light;
+    border-bottom: 3px solid $base-light;
 }
 
 .sudoku-cell:nth-child(3n+1) {
-    border-left: 3px solid  $base-light;
+    border-left: 3px solid $base-light;
 }
 
 .sudoku-cell:nth-child(3n) {
-    border-right: 3px solid  $base-light;
+    border-right: 3px solid $base-light;
+}
+
+.coat {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.big {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .sudoku-row {
+        width: 100%;
+    }
+
+    .sudoku-cell-branco {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sudoku-cell-gold {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sudoku-cell {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

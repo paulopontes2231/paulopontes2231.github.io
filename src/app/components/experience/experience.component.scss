@@ -71,12 +71,43 @@
     margin-top: 15px;
 }
 
-.cv{
+.cv {
     color: white;
     text-decoration: none;
 }
 
-.cv:hover{
+.cv:hover {
     color: white;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 0 20px;
+        /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+
+    .container {
+        .row {
+            flex-direction: column;
+            /* Altera a direção dos elementos para empilhá-los verticalmente */
+        }
+
+        .cartolina {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    .cartolina {
+        width: 100%;
+    }
+
+    .cardTechnologies {
+        width: 100%;
+    }
+    .image {
+        width: 100%;
+    }
 }

@@ -1,33 +1,30 @@
-<app-header style="height: 66px;"></app-header>
-<div class="big">
-    <div style="max-width: 1200px; margin-inline: auto; height: fit-content; margin-top: auto;">
-        <div class="row" style="width: 1200px;">
-            <div class="col">
-                <button class="button" (click)="clearAll()">CLEAR ALL</button>
-            </div>
-            <div class="col">
-                <div class="sudoku-grid">
-                    <div class="sudoku-row" *ngFor="let row of sudokuGrid; let i = index">
-                        <ng-container *ngFor="let cell of row; let j = index">
-                            <input *ngIf="sudokuGrid[i][j].value != 0 && cell != 0" 
-                            [ngClass]="{'sudoku-cell-branco': sudokuGrid[i][j].base == false,  'sudoku-cell-gold': sudokuGrid[i][j].base == true }"
-                           type="number" min="1" max="9"
-                                [(ngModel)]="sudokuGrid[i][j].value" #cell [disabled]="allDisabled== true"/>
-                            <input *ngIf="cell == 0" type="number" inputmode="numeric" min="1" max="9" maxlength="1" 
-                                class="sudoku-cell" #cell (keydown)="onKeyDown($event, cell, i,j, cell.value)" [disabled]="allDisabled===true" />
-                        </ng-container>
+
+<div class="coat">
+    <app-header style="height: 66px;"></app-header>
+        <div class="container" style="max-width: 1200px; margin-inline: auto; height: fit-content; margin-top: auto;">
+            <div class="row">
+                <div class="col">
+                    <button class="button" (click)="clearAll()">CLEAR ALL</button>
+                </div>
+                <div class="col">
+                    <div class="sudoku-grid">
+                        <div class="sudoku-row" *ngFor="let row of sudokuGrid; let i = index">
+                            <ng-container *ngFor="let cell of row; let j = index">
+                                <input *ngIf="sudokuGrid[i][j].value != 0 && cell != 0" 
+                                [ngClass]="{'sudoku-cell-branco': sudokuGrid[i][j].base == false,  'sudoku-cell-gold': sudokuGrid[i][j].base == true }"
+                               type="number" min="1" max="9"
+                                    [(ngModel)]="sudokuGrid[i][j].value" #cell [disabled]="allDisabled== true"/>
+                                <input *ngIf="cell == 0" type="number" inputmode="numeric" min="1" max="9" maxlength="1" 
+                                    class="sudoku-cell" #cell (keydown)="onKeyDown($event, cell, i,j, cell.value)" [disabled]="allDisabled===true" />
+                            </ng-container>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <button class="button" (click)="solveSudoku()">SOLVE SUDOKU</button>
+                <div class="col">
+                    <button class="button" (click)="solveSudoku()">SOLVE SUDOKU</button>
+                </div>
             </div>
         </div>
-    </div>
-
-
-
-
     <div class="footer">
         <h5 class="title">Follow me on social media</h5>
         <a href="https://linkedin.com/in/paulo-pontes2231" target="_blank" rel="noopener noreferrer">

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarousel, NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { SkillsetComponent } from './components/skillset/skillset.component';
 import { RecentProjectsComponent } from './components/recent-projects/recent-projects.component';
@@ -41,7 +41,7 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
     PlayerDashboardComponent,
     PlayerDashboardDetailComponent,
     SudokuComponent,
-    CurriculumComponent
+    CurriculumComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,8 +52,8 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
     MatSortModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
-  ],
+    FormsModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

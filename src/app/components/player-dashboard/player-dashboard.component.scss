@@ -29,6 +29,11 @@ td:last-child {
     background-color: $base-dark;
     border-bottom: 2px solid white;
     border-radius: 2px;
+ 
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      
 }
 
 .detailButton {
@@ -189,8 +194,15 @@ td:last-child {
     flex: 1;
 }
 
+.container {
+    width: 1200px;
+    margin-inline: auto;
+    height: fit-content;
+}
+
 .footer {
     margin-top: auto;
+    width: 100%;
 
     :host {
         display: block;
@@ -242,6 +254,24 @@ input[type="file"] {
 }
 
 ::ng-deep .mat-sort-header-container {
-    display:flex;
-    justify-content:center;
-  }
+    display: flex;
+    justify-content: center;
+}
+
+.coat {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.big {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+
+        /* Adapta o padding para evitar que os elementos sejam cortados */
+    }
+}
