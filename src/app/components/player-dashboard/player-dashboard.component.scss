@@ -200,48 +200,7 @@ td:last-child {
     height: fit-content;
 }
 
-.footer {
-    margin-top: auto;
-    width: 100%;
 
-    :host {
-        display: block;
-        background-color: $base-dark;
-    }
-
-    .title {
-        width: fit-content;
-        color: white;
-        margin-inline: auto;
-        padding-top: 10px;
-        font-weight: 500;
-        margin-bottom: 10px;
-    }
-
-    .text {
-        width: fit-content;
-        color: $base-light;
-        margin-inline: auto;
-        font-weight: 500;
-        font-size: 0.9rem;
-        justify-content: center;
-        padding-bottom: 5px;
-        margin-bottom: 0px;
-    }
-
-    .icon {
-        width: 30px;
-        height: 30px;
-        margin-inline: auto;
-        color: $base-light;
-        margin-bottom: 10px;
-        display: block;
-    }
-
-    .icon:hover {
-        color: $base-gold;
-    }
-}
 
 input[type="file"] {
     display: none;
@@ -266,6 +225,14 @@ input[type="file"] {
 
 .big {
     flex: 1;
+}
+
+.footer {
+    background-color: $base-dark;
+    position: relative;
+    height: 120px;
+    margin-top: -120px;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
