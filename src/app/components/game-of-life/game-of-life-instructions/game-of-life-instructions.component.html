@@ -1,0 +1,40 @@
+<div class="row" style="margin-inline: 10px;">
+    <div class="col-9" style="width: fit-content; padding-left: 0px;">
+        <h1 style="width: fit-content;">Rules</h1>
+    </div>
+    <div class="col-2" style="width: fit-content; margin-left: auto; margin-top: 10px;">
+        <button class="button" (click)="close()" style="width: fit-content; margin-left: auto;">X</button>
+    </div>
+</div>
+
+<div class="container">
+    <p>
+        <strong>Conway's Game of Life</strong> is a cellular automaton devised by mathematician John Conway. It is a zero-player game, meaning its evolution is determined by its initial state, requiring no further input.
+    </p>
+    <ul>
+        <li>The game consists of a grid of cells, each of which can be <strong>alive</strong> or <strong>dead</strong>.</li>
+        <li>Each cell interacts with its eight neighbors (horizontally, vertically, and diagonally adjacent).</li>
+    </ul>
+    <p><strong>Rules:</strong></p>
+    <ol>
+        <li>Any live cell with fewer than two live neighbors dies (underpopulation).</li>
+        <li>Any live cell with two or three live neighbors lives on to the next generation (survival).</li>
+        <li>Any live cell with more than three live neighbors dies (overpopulation).</li>
+        <li>Any dead cell with exactly three live neighbors becomes a live cell (reproduction).</li>
+    </ol>
+    <p>
+        The game proceeds in steps called generations. At each generation, the rules above are applied to every cell simultaneously to create the next generation.
+    </p>
+    <p>
+        <strong>How to play:</strong>
+        <ul>
+            <li>Click on cells to toggle them alive or dead and set your initial pattern.</li>
+            <li>Press <strong>Start</strong> to begin the simulation.</li>
+            <li>Press <strong>Pause</strong> to stop the simulation at any time.</li>
+            <li>Use <strong>Randomize</strong> to fill the grid with a random pattern.</li>
+            <li>Use <strong>Clear</strong> to reset the grid.</li>
+        </ul>
+
+
+  
+</div>

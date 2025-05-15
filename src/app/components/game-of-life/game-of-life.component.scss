@@ -1,0 +1,260 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    background-color: $base-color;
+}
+
+.footer {
+    background-color: $base-dark;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.footer {
+    margin-top: auto;
+
+    :host {
+        display: block;
+        background-color: $base-dark;
+        width: 100%;
+    }
+
+    .title {
+        width: fit-content;
+        color: white;
+        margin-inline: auto;
+        padding-top: 10px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        width: fit-content;
+        color: $base-light;
+        margin-inline: auto;
+        font-weight: 500;
+        font-size: 0.9rem;
+        justify-content: center;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin-inline: auto;
+        color: $base-light;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .icon:hover {
+        color: $base-gold;
+    }
+}
+
+
+.button {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border: 0px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.coat {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.big {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .-row {
+        width: 100%;
+    }
+
+    .-cell-branco {
+        width: 35px;
+        height: 35px;
+    }
+
+    .-cell-gold {
+        width: 35px;
+        height: 35px;
+    }
+
+    .-cell {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sudoku-cell-branco {
+    color: white;
+    width: 20px;
+    /* Adjust width as needed */
+    height: 20px;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.sudoku-cell {
+    color: white;
+    width: 20px;
+    /* Adjust width as needed */
+    height: 20px;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.cell-gold {
+    color: $base-gold;
+    width: 20px;
+    /* Adjust width as needed */
+    height: 2cqmax;
+    /* Adjust height as needed */
+    border: 1px solid $base-light;
+    /* Add border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    text-align: center;
+}
+
+.sudoku-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.sudoku-row {
+    display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items along the main axis with equal space between them */
+}
+
+.col {
+    flex: 1;
+    /* Equal width for each column */
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally within the column */
+    align-items: center;
+    /* Center items vertically within the column */
+}
+
+.button {
+    background-color: $base-dark;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    max-width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border: 0px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+    color: $base-gold;
+}
+
+.life-cell.alive {
+    font-size: 0;
+    background: white;
+    width: 19px;
+    height: 19px;
+    color: white // or any color you prefer for alive cells
+}
+
+
+.button:disabled,
+.button[disabled] {
+    pointer-events: none;
+    opacity: 0.6;
+    color: white;
+    border-color: $base-dark;
+    background-color: $base-dark;
+    transform: none;
+}
+
+.title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subtitle{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}

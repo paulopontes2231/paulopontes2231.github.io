@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { FormsModule } from '@angular/forms';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { GameOfLifeComponent } from './components/game-of-life/game-of-life.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
     PlayerDashboardDetailComponent,
     SudokuComponent,
     CurriculumComponent,
+    GameOfLifeComponent
   ],
   imports: [
     BrowserModule,

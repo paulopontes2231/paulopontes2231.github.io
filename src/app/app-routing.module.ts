@@ -7,10 +7,12 @@ import { PlayerRaterComponent } from './components/player-rater/player-rater.com
 import { PlayerDashboardComponent } from './components/player-dashboard/player-dashboard.component';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { GameOfLifeComponent } from './components/game-of-life/game-of-life.component';
 
 const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: 'main-page',component: HomeComponent},
                         { path: 'playerRater', component: PlayerDashboardComponent}, { path: 'sudoku-solver', component: SudokuComponent},
                         {path: 'curriculum', component: CurriculumComponent}, {path: 'quoteguesser', component: PlayerDashboardComponent},
+                        {path: 'game-of-life', component: GameOfLifeComponent},
                         {path: '', redirectTo: 'main-page', pathMatch: 'full'}
                        ];
 
