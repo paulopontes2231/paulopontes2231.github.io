@@ -1,11 +1,11 @@
 @import '../../../styles.scss';
 
 :host {
-    display:block;
+    display: block;
     background-color: $base-dark;
 }
 
-.title{
+.title {
     width: fit-content;
     color: $base-gold;
     margin-inline: auto;
@@ -13,7 +13,7 @@
     font-weight: 700;
 }
 
-.subtitle{
+.subtitle {
     width: fit-content;
     color: $base-light;
     margin-inline: auto;
@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.logo{
+.logo {
     width: 85px;
     height: 85px;
     display: block;
@@ -30,26 +30,26 @@
     border-radius: 50px;
 }
 
-.left{
+.left {
     margin-left: 50px;
 }
 
-.down{
+.down {
     margin-top: 40px;
-    
+
 }
 
-.top{
+.top {
     margin-top: 30px;
 }
 
-.image{
+.image {
     height: 50px;
     margin-left: 18px;
     margin-top: 17px;
 }
 
-.text{
+.text {
     color: $base-gold;
     max-height: fit-content;
     height: fit-content;
@@ -57,14 +57,49 @@
     max-width: fit-content;
 }
 
-.area{
+.area {
     color: $base-gold;
     font-size: small;
     font-weight: 500;
     margin-top: 45px;
 }
 
-.specifics{
+.specifics {
     color: white;
     margin-top: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+
+    app-skill {
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 667px) {
+    .subtitle {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .left {
+        margin-left: 0;
+    }
+
+    .image {
+        margin-left: 0;
+    }
 }
