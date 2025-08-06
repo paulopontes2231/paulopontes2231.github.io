@@ -84,21 +84,6 @@ export class SudokuService {
 
 
     postSudoku(text: any) {
-        let grid = text
-        let newGrid = Array.from({ length: 9 }, () => Array(9).fill(0));
-        for (let i = 0; i < grid.length; i++) {
-            for (let j = 0; j < grid[i].length; j++) {
-                newGrid[i][j] = grid[i][j].value
-            }
-        }
-        this.solveSudoku(newGrid);
-        for (let i = 0; i < grid.length; i++) {
-            for (let j = 0; j < grid[i].length; j++) {
-                if (grid[i][j].base == false) {
-                    grid[i][j].value = newGrid[i][j]
-                }
-            }
-        }
-        return grid
+        return this.http.post(this.baseURL, { text: text }, { observe: 'response', responseType: 'json' })
     }
 }

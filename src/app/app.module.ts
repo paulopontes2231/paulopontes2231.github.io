@@ -27,6 +27,7 @@ import { GameOfLifeComponent } from './components/game-of-life/game-of-life.comp
 import { SkillComponent } from './components/skill/skill.component';
 import { ProjectComponent } from "./components/project/project.component";
 import { JobComponent } from './components/job/job.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { JobComponent } from './components/job/job.component';
     BrowserAnimationsModule,
     FormsModule,
     ProjectComponent,
-    JobComponent
+    JobComponent,
+    MatSnackBarModule
 ],
   providers: [],
   bootstrap: [AppComponent]

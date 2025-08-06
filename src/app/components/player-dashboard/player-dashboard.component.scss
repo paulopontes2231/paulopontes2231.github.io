@@ -6,7 +6,6 @@
 }
 
 .table-container {
-
     width: 100%;
 }
 
@@ -110,6 +109,10 @@ mat-paginator {
     color: white;
     border-color: white;
     width: 60px !important;
+}
+
+::ng-deep .mat-mdc-paginator-page-size {
+  display: none !important;
 }
 
 :host {

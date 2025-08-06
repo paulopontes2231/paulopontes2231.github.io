@@ -17,7 +17,7 @@ import { InstructionsComponent } from '../instructions/instructions.component';
 })
 export class PlayerDashboardComponent implements OnInit {
 
-  players: Player[] = []
+  players: any[] = []
   playerList2: Player[] = []
   bestRatings: any[] = []
   pageSizeOptions = [5]
@@ -37,6 +37,10 @@ export class PlayerDashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+     this.playerService.getPlayers().subscribe(res => {
+      this.players = res
+      this.dataSource.data = this.players
+   })
   }
 
   ngAfterViewInit() {

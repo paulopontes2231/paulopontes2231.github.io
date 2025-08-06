@@ -3,6 +3,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/services/player.service';
 import { HighscoreComponent } from '../highscore/highscore.component';
+import { MondayService } from 'src/app/services/monday.service';
 
 declare var require: any
 let DateGenerator = require('random-date-generator');
@@ -46,7 +47,7 @@ export class IsItMondayComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private playerService: PlayerService,
+    private mondayService: MondayService,
     private dialog: MatDialog,
   ) { }
 
@@ -65,12 +66,10 @@ export class IsItMondayComponent implements OnInit {
     this.day = this.generateDate();
 
     if (this.highestScore == null) {
-      /* this.service.getHighestScore().subscribe(res => {
-        this.highestScore = res.highestScore
-        this.highestScorer = res.highestScorer
-      }) */
-      this.highestScore = 1
-      this.highestScorer = "Paulo Pontes"
+      this.mondayService.getHighscore().subscribe(res => {
+        this.highestScore = JSON.parse(JSON.stringify(res))[0].highscore
+        this.highestScorer = JSON.parse(JSON.stringify(res))[0].highScorer
+      })
     }
     this.options = this.generateOptions(this.day.getDay());
 

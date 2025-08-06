@@ -84,3 +84,7 @@ button {
     padding: 0 16px;
     transition: background-color 70ms cubic-bezier(.2, 0, .38, .9), outline 70ms cubic-bezier(.2, 0, .38, .9);
 }
+
+.centered-snackbar{
+    color: $base-gold;
+}

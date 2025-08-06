@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SudokuService } from 'src/app/services/sudoku.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-sudoku',
@@ -13,7 +15,8 @@ export class SudokuComponent {
   allDisabled = false
 
   constructor(
-    public sudokuService: SudokuService
+    public sudokuService: SudokuService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -55,7 +58,30 @@ export class SudokuComponent {
       }
     }
     this.allDisabled = true
-    this.sudokuGrid=this.sudokuService.postSudoku(this.sudokuGrid)
+    this.sudokuService.postSudoku(this.sudokuGrid).subscribe(res => {
+      if (this.isGridAllZeros(JSON.parse(JSON.stringify(res.body))) == true) {
+        this.generateGrid()
+        this.allDisabled = false
+        this.snackBar.open("There was an error, please try again and check your grid!", 'Close', {
+          duration: 3000,  // milliseconds
+          panelClass: ['centered-snackbar','error-snackbar']  // optional CSS class for styling
+        });
+      } else {
+        this.sudokuGrid = JSON.parse(JSON.stringify(res.body)).text
+
+      }
+    })
+  }
+
+  isGridAllZeros(grid: any): boolean {
+    for (let i = 0; i < grid.length; i++) {
+      for (let j = 0; j < grid[i].length; j++) {
+        if (grid[i][j] !== 0) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 
 }

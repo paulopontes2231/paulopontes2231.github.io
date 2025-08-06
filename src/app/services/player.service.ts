@@ -13,7 +13,7 @@ export class PlayerService {
     responseData: any = ''
     playerList: any = []
 
-    baseURL = `${environment.apiUrl}player/`;
+    baseURL = `${environment.apiUrl}player`;
     players: Player[] = [];
 
     constructor(
@@ -41,10 +41,10 @@ export class PlayerService {
     }
 
     refreshPlayersList() {
-        /*   this.getPlayers().subscribe((res) => {
+          this.getPlayers().subscribe((res) => {
               this.players = res as Player[]
               this.playersChanged.next(this.players.slice())
-          }) */
+          })
     }
 
     deletePlayer(uniqueID: any) {
