@@ -77,3 +77,12 @@ p{
     color: white;
     cursor: default;
 }
+
+.scrollable-container {
+  max-height: 90vh; /* fits inside the viewport */
+  overflow-y: auto; /* allows vertical scrolling */
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* Makes scroll feel smooth on mobile */
+}

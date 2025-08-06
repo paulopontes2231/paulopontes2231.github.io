@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Player } from "../entities/player";
+import { environment } from "src/environments/environment";
 
 
 @Injectable({ providedIn: 'root' })
@@ -12,7 +13,7 @@ export class PlayerService {
     responseData: any = ''
     playerList: any = []
 
-    baseURL = 'http://localhost:3000/player/'
+    baseURL = `${environment.apiUrl}player/`;
     players: Player[] = [];
 
     constructor(
@@ -21,12 +22,12 @@ export class PlayerService {
     ) { }
 
     postPlayerList(text: any) {
-        return this.http.post(this.baseURL, {text:text}, { observe: 'response', responseType: 'json' })
+        return this.http.post(this.baseURL, { text: text }, { observe: 'response', responseType: 'json' })
     }
 
     getPlayerListDefault() {
         return this.http.get('assets/FMRATER2.csv', { observe: 'response', responseType: 'text' })
-   }
+    }
 
     openSnackBar() {
         this._snackBar.open(this.responseData, 'OK', {
@@ -40,10 +41,10 @@ export class PlayerService {
     }
 
     refreshPlayersList() {
-      /*   this.getPlayers().subscribe((res) => {
-            this.players = res as Player[]
-            this.playersChanged.next(this.players.slice())
-        }) */
+        /*   this.getPlayers().subscribe((res) => {
+              this.players = res as Player[]
+              this.playersChanged.next(this.players.slice())
+          }) */
     }
 
     deletePlayer(uniqueID: any) {

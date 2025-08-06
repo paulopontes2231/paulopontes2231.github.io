@@ -24,6 +24,9 @@ import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { FormsModule } from '@angular/forms';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { GameOfLifeComponent } from './components/game-of-life/game-of-life.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { ProjectComponent } from "./components/project/project.component";
+import { JobComponent } from './components/job/job.component';
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import { GameOfLifeComponent } from './components/game-of-life/game-of-life.comp
     PlayerDashboardDetailComponent,
     SudokuComponent,
     CurriculumComponent,
-    GameOfLifeComponent
+    GameOfLifeComponent,
+    SkillComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,8 @@ import { GameOfLifeComponent } from './components/game-of-life/game-of-life.comp
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ProjectComponent,
+    JobComponent
 ],
   providers: [],
   bootstrap: [AppComponent]

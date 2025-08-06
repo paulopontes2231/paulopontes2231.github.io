@@ -1,0 +1,9 @@
+<div class="container">
+    <p class="highscore">NEW HIGHSCORE!</p>
+    <p class="question">Do you want to save this score?</p>
+    <input class="username"  [(ngModel)]="username" (keyup)="checkValue($any($event.target).value)" placeholder="Username">
+    <div class="buttons">
+        <button [disabled]="disabled==true" (click)="save(username)" class="positive">YES!</button>
+        <button (click)="close()" class="negative">No, thank you!</button>
+    </div>
+</div>

@@ -104,7 +104,19 @@ body{
     border-color: $base-gold;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
+    
+
+    .container {
+        margin-left: 10px;
+    }
+
+    .hero-img{
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
     .text {
         padding-left: 0 5px;
     }
@@ -113,5 +125,15 @@ body{
         .row {
             flex-direction: column;
         }
+
+        .hero-img{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .subtitle{
+        font-size: 2rem;
     }
 }

@@ -8,11 +8,6 @@
 .container {
     padding-bottom: 40px;
     width: 100%;
-    margin-inline: auto;
-    width: fit-content;
-    max-width: fit-content;
-    display: flex;
-    gap: 50px;
 }
 
 .title {
@@ -91,16 +86,17 @@
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .container {
         padding: 0 20px;
     }
 
     .container {
-        
+        .row {
             flex-direction: column;
-        
-        .job {
+        }
+
+        .cartolina {
             margin-bottom: 20px;
         }
     }

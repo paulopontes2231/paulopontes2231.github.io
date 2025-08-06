@@ -20,7 +20,7 @@ export class PlayerDashboardComponent implements OnInit {
   players: Player[] = []
   playerList2: Player[] = []
   bestRatings: any[] = []
-  pageSizeOptions = [5, 10]
+  pageSizeOptions = [5]
   fileToUpload: File | null = null;
 
   dataSource = new MatTableDataSource<any>(this.players)
@@ -82,7 +82,7 @@ export class PlayerDashboardComponent implements OnInit {
   openInstructions() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '80%'
-    dialogConfig.height = '450px'
+    dialogConfig.maxHeight = '450px'
     dialogConfig.autoFocus = false
     const dialogRef = this.dialog.open(InstructionsComponent, {
     });

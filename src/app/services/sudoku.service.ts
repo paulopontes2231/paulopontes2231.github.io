@@ -3,12 +3,13 @@ import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Player } from "../entities/player";
+import { environment } from "src/environments/environment";
 
 
 @Injectable({ providedIn: 'root' })
 export class SudokuService {
 
-    baseURL = 'http://localhost:3000/sudoku'
+    baseURL = `${environment.apiUrl}sudoku`;
 
     constructor(
         private http: HttpClient,

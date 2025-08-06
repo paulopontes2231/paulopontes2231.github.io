@@ -1,0 +1,13 @@
+<div class="cartolina">
+    <div class="img">
+        <img class="image" src="{{project.image}}">
+    </div>
+    <h6 class="cardtitle">{{project.title}}</h6>
+    <div class="carddescription">{{project.description}}</div>
+
+    <a href="{{project.path}}">
+        <button class="button" *ngIf="project.showButton === true">
+            Demo
+        </button>
+    </a>
+</div>

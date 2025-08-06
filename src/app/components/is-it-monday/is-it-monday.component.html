@@ -2,10 +2,11 @@
     <app-header></app-header>
     <div class="container" style="padding-top: 100px;">
         <div class="col-6 teste" style="margin-left: auto; margin-right: auto;">
+            <div class="highScore">Highscore: <div class="gold">{{highestScore}} </div>  Holder: <div class="gold">{{highestScorer}}</div></div>
             <div class="row dateCard">
                 <div class="col">
                     <p class="row info">{{day.toString()}}</p>
-                    <p class="row info">Back to Back: {{counter}}</p>
+                    <p class="row info">Score: {{counter}}</p>
                 </div>
             </div>
             <div class="grid-container">
@@ -18,8 +19,7 @@
                 <button  [disabled]="disabled" class="buttonOption" (click)="buttonClick(options[3])"
                 style="max-width: 200px; justify-self: center;">{{options[3]}}</button>
             </div>
-            <br>
-            <div *ngIf="bonus == true" class="row" style="margin-inline: auto; width: fit-content; text-align: center;">
+            <div  class="row" *ngIf="bonus == true" style="margin-inline: auto; width: fit-content; text-align: center;">
                 <p class="answer">🔥 Bonus Round 🔥 Double Points 🔥</p>
             </div>
             <div class="row" style="margin-inline: auto; width: fit-content; margin-bottom: 30px; text-align: center;">

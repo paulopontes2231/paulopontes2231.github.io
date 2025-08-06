@@ -104,6 +104,8 @@
 .sudoku-grid {
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    justify-self: center;
 }
 
 .sudoku-row {
@@ -150,8 +152,6 @@ input::-webkit-inner-spin-button {
     font-size: 13px;
     border: 0px;
     height: 40px;
-    margin-top: 20px;
-    margin-bottom: 30px;
 }
 
 .button:hover {
@@ -187,15 +187,37 @@ input::-webkit-inner-spin-button {
     flex: 1;
 }
 
+.container {
+    width: fit-content;
+    display: FLEX;
+    flex-direction: column;
+    margin-inline: auto;
+    height: fit-content;
+    margin-top: auto;
+}
+
+.buttons {
+    padding-bottom: 15px;
+    display: flex;
+}
+
+.buttonSolve {
+    margin-left: auto;
+}
+
 @media only screen and (max-width: 1200px) {
     .container {
-        width: 100%;
+        width: fit-content;
     }
 }
 
 @media only screen and (max-width: 450px) {
     .sudoku-row {
-        width: 100%;
+        width: fit-content;
+    }
+
+    .sudoku-grid {
+        max-width: 90vw;
     }
 
     .sudoku-cell-branco {
@@ -217,7 +239,7 @@ input::-webkit-inner-spin-button {
 .container {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 46.5%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }

@@ -76,6 +76,7 @@
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
 .coat {
     display: flex;
     flex-direction: column;
@@ -210,6 +211,7 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     width: fit-content;
     max-width: 200px;
+    width: 200px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
     border: 0px;
@@ -243,7 +245,7 @@ input::-webkit-inner-spin-button {
     transform: none;
 }
 
-.title{
+.title {
     color: white;
     font-size: 1.5rem;
     font-weight: 500;
@@ -251,10 +253,42 @@ input::-webkit-inner-spin-button {
     text-align: center;
 }
 
-.subtitle{
+.subtitle {
     color: white;
     font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 100%;
+    gap: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+    .controls {
+        justify-content: space-evenly;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .buttons{
+        max-width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .footer{
+        display: none;
+    }
+
+
+    .sudoku-cell {
+        width: 20px;
+        height: 20px;
+    }
 }

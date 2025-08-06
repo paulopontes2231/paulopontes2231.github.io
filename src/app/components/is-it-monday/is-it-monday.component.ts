@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { PlayerService } from 'src/app/services/player.service';
+import { HighscoreComponent } from '../highscore/highscore.component';
 
 declare var require: any
 let DateGenerator = require('random-date-generator');
@@ -37,6 +41,15 @@ export class IsItMondayComponent implements OnInit {
   counter = 0
   disabled = false;
   bonus = false;
+  highestScore: number | null = null;
+  highestScorer: string | null = null;
+
+  constructor(
+    private router: Router,
+    private playerService: PlayerService,
+    private dialog: MatDialog,
+  ) { }
+
 
   ngOnInit() {
     this.daysOfTheWeek = [
@@ -51,6 +64,14 @@ export class IsItMondayComponent implements OnInit {
     this.correct = ""
     this.day = this.generateDate();
 
+    if (this.highestScore == null) {
+      /* this.service.getHighestScore().subscribe(res => {
+        this.highestScore = res.highestScore
+        this.highestScorer = res.highestScorer
+      }) */
+      this.highestScore = 1
+      this.highestScorer = "Paulo Pontes"
+    }
     this.options = this.generateOptions(this.day.getDay());
 
     this.correctOption = this.day.toDateString().substring(0, 3);
@@ -96,21 +117,24 @@ export class IsItMondayComponent implements OnInit {
     this.disabled = true
     if (row.substring(0, 3) == this.correctOption) {
       this.correct = "Correct! It was " + this.findstartswith(DAYS_OF_THE_WEEK, this.correctOption) + "."
+      this.counter++
+      if (this.bonus == true) {
         this.counter++
-        if(this.bonus == true){
-          this.counter++
-        }
+      }
     } else {
       this.correct = "Wrong! It was " + this.findstartswith(DAYS_OF_THE_WEEK, this.correctOption) + "."
-        this.counter=0
-        this.bonus = false
+      if (this.counter > this.highestScore!) {
+        this.newHighScore(this.counter)
+      }
+      this.counter = 0
+      this.bonus = false
     }
     setTimeout(() => {
       this.ngOnInit()
-      if(this.counter > 3){
-        if(5 < Math.random()*10 && 6 >= Math.random()*10){
+      if (this.counter >= 3) {
+        if (5 < Math.random() * 10 && 6 >= Math.random() * 10) {
           this.bonus = true
-        }else{
+        } else {
           this.bonus = false
         }
       }
@@ -126,6 +150,15 @@ export class IsItMondayComponent implements OnInit {
         return inputlist[i];
       }
     }
+  }
+
+  newHighScore(counter) {
+    const dialogConfig = new MatDialogConfig()
+    dialogConfig.data = counter
+    dialogConfig.autoFocus = true
+    dialogConfig.width = '300px'
+    dialogConfig.height = '210px'
+    this.dialog.open(HighscoreComponent, dialogConfig)
   }
 
 }

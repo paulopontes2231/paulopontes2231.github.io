@@ -6,9 +6,30 @@
     color: white;
 }
 
+.header {
+    position: fixed;
+}
+
 h1,
 h2 {
     text-align: center;
+}
+
+h1{
+    margin-right: auto; width: fit-content; margin-left: 0px; text-align: justify;margin-left: 0px;
+}
+
+.category{
+    margin-right: auto; width: fit-content; margin-left: 0px; text-align: justify;
+}
+
+.profileText{
+    text-align: justify;
+}
+
+.container {
+    padding-top: 100px;
+    max-width: 1200px;
 }
 
 .divider {
@@ -91,12 +112,14 @@ h2 {
     background-color: #95B1D8;
 }
 
-.level{
+.level {
     color: $base-light;
 }
 
 @media only screen and (max-width: 400px) {
-    .midcol, .emoji {
+
+    .midcol,
+    .emoji {
         display: none;
     }
 }
@@ -104,11 +127,11 @@ h2 {
 @media only screen and (max-width: 1200px) {
     .midcol {
         display: none;
-    }    
+    }
 }
 
 @font-face {
     font-family: NotoColorEmojiLimited;
     unicode-range: U+1F1E6-1F1FF;
     src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
-  }
+}

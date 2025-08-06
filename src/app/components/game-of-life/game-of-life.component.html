@@ -20,12 +20,12 @@
 
         </div>
 
-        <div class="row controls" style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
-            <button class=" button" [disabled]="running==true" (click)="openInstructions()" style="max-width: 100px;">Rules</button>
-            <button class=" button" [disabled]="running==true" (click)="startGame()" style="max-width: 100px;">Start</button>
-            <button class=" button" [disabled]="running==false" (click)="stopGame()" style="max-width: 100px;">Pause</button>
-            <button class=" button" [disabled]="running==true" (click)="randomize()" style="max-width: 100px;">Randomize</button>
-            <button class=" button" [disabled]="running==true" (click)="clear()" style="max-width: 100px;">Clear</button>
+        <div class="controls" style="display: flex; margin-top: 20px;">
+            <button class="button" [disabled]="running==true" (click)="openInstructions()" style="max-width: 100px;">Rules</button>
+            <button class="button" [disabled]="running==true" (click)="startGame()" style="max-width: 100px;">Start</button>
+            <button class="button" [disabled]="running==false" (click)="stopGame()" style="max-width: 100px;">Pause</button>
+            <button class="button" [disabled]="running==true" (click)="randomize()" style="max-width: 100px;">Randomize</button>
+            <button class="button" [disabled]="running==true" (click)="clear()" style="max-width: 100px;">Clear</button>
         </div>
     </div>
     <div class="footer">
