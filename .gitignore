@@ -36,6 +36,7 @@ yarn-error.log
 testem.log
 /typings
 /src/environments/
+proxy.conf.json
 
 # System files
 .DS_Store
