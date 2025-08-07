@@ -1,1 +1,12 @@
-<p>lifelines works!</p>
+<div class="lifelines-desktop" *ngIf="isDesktop">
+    <div *ngFor="let lifeline of lifelines">
+        <img class="image" *ngIf="lifeline === false" src="assets/icons/jokerBW.png" />
+        <img class="image" *ngIf="lifeline === true" src="assets/icons/joker.png" />
+    </div>
+</div>
+
+<!-- Mobile layout (< 650px): show one icon + count -->
+<div class="lifelines-mobile" *ngIf="!isDesktop">
+    <img class="image" src="assets/icons/joker.png" />
+    <span class="lifeline-count">x{{ activeLifelineCount() }}</span>
+</div>

@@ -1,12 +1,35 @@
 <div class="coat">
     <app-header style="height: 66px;"></app-header>
-
     <app-question></app-question>
+
     <div class="content">
-        <app-lifelines></app-lifelines>
-        <div class="optionDiv">
+        <!-- Desktop-only layout -->
+        <div class="lifeline-levels-wrapper">
+            <app-lifelines></app-lifelines>
+            <div class="optionDiv">
+                <app-option class="option" *ngFor="let option of options" [option]="option"></app-option>
+            </div>
+            <app-levels></app-levels>
+        </div>
+
+        <!-- Mobile layout -->
+        <div class="optionDiv mobile">
             <app-option class="option" *ngFor="let option of options" [option]="option"></app-option>
         </div>
-        <app-levels></app-levels>
+
+        <div class="bottom-row">
+            <app-lifelines></app-lifelines>
+            <div class="number">
+                <span class="fraction">
+                    <span class="top">{{ counter }}</span>
+                    <span class="line"></span>
+                    <span class="bottom">15</span>
+                </span>
+            </div>
+            <app-levels></app-levels>
+        </div>
     </div>
+
+
+
 </div>

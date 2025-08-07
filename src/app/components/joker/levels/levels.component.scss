@@ -1,0 +1,43 @@
+@import '../../../../styles.scss';
+
+
+.image {
+    max-height: 50px;
+    max-width: 88px;
+    margin-bottom: 7px;
+}
+
+.level-count {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: $base-gold;
+    margin-left: 3px;
+}
+
+.levels-mobile {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.value {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    display: table;
+    margin: 0 auto;
+}
+
+.level {
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background: darkblue;
+    border-top: 4px solid $base-gold;
+    border-bottom: 4px solid $base-gold;
+    padding-inline: 10px;
+    height: 35px;
+}
+
+.level-active {
+    color: $base-gold;
+}

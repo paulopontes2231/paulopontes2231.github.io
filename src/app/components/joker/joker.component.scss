@@ -1,28 +1,126 @@
 @import '../../../styles.scss';
 
-.coat{
+.coat {
     background-color: $base-color;
 }
 
-.content{
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-inline: 16px;
+
+    /* Large screen horizontal layout */
     display: flex;
-    flex-direction: row;
-        width: 1200px;
-    margin-inline: auto;    
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 650px) {
+        display: block;
+    }
 }
 
-.optionDiv{
-   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
-  gap: 10px; /* space between items */
-  width: fit-content; /* shrink-wrap the grid if needed */
+/* Option grid - always shown */
+.optionDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+
+    @media (max-width: 650px) {
+        width: 100%;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
 }
 
-app-levels{
-    margin-left: auto;
+/* Desktop-only wrapper for lifelines and levels */
+.lifeline-levels-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
+    app-lifelines,
+    app-levels {
+        color: white;
+        flex-shrink: 0;
+    }
+
+    app-lifelines {
+        margin-right: 30px;
+        margin-left: 33px;
+    }
+
+    app-levels {
+        margin-left: 30px;
+        margin-right: 33px;
+        width: fit-content;
+    }
 }
 
-app-lifelines{
-    margin-right: auto;
+/* Mobile-only layout below options */
+.bottom-row {
+    display: none;
+
+    @media (max-width: 650px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    app-lifelines,
+    app-levels, .lifeline-mobile {
+        width: 120px;
+        color: white;
+    }
+}
+
+/* Fractional number for mobile only */
+.number {
+    background-color: #14242E;
+    border-radius: 110px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+
+    .fraction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        margin: 2px 0;
+    }
+
+    @media (min-width: 650px) {
+        display: none;
+    }
+}
+
+@media (min-width: 650px) {
+    .mobile {
+        display: none;
+    }
+
+    app-lifelines,
+    app-levels{
+        width: 120px;
+    }
 }

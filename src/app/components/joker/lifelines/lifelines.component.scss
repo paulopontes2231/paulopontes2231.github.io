@@ -1,0 +1,16 @@
+@import '../../../../styles.scss';
+
+
+.image {
+    max-height: 50px;
+    max-width: 88px;
+    margin-bottom: 7px;
+}
+
+.lifeline-count{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: $base-gold;
+    margin-left: 3px;
+}

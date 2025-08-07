@@ -8,7 +8,8 @@ import { Option } from 'src/app/entities/iOption';
 })
 export class JokerComponent {
 
+  counter = 1 //tem de ser is buscar ao serviço
   options: Option[] = [
-        new Option("A"), new Option("B"), new Option("C"), new Option("D")      ];
+        new Option("Cabeça de Vento"), new Option("Espalha Brasas"), new Option("Carapau de Corrida"), new Option("Barata Tonta")      ];
 
 }

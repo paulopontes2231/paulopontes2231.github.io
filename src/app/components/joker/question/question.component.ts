@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './question.component.scss'
 })
 export class QuestionComponent {
-
+  counter = 1; //tem de se ir buscar ao service
 }

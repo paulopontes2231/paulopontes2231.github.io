@@ -9,4 +9,8 @@ import { Option } from 'src/app/entities/iOption';
 export class OptionComponent {
 
   @Input() option!: Option
+
+  click(){
+    console.log("click")
+  }
 }
