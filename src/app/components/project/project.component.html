@@ -1,6 +1,6 @@
 <div class="cartolina">
     <div class="img">
-        <img class="image" src="{{project.image}}">
+        <img class="image" [ngClass]="{ 'small-image': project.title =='Joker'}"  src="{{project.image}}">
     </div>
     <h6 class="cardtitle">{{project.title}}</h6>
     <div class="carddescription">{{project.description}}</div>

@@ -8,11 +8,12 @@ import { PlayerDashboardComponent } from './components/player-dashboard/player-d
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { GameOfLifeComponent } from './components/game-of-life/game-of-life.component';
+import { JokerComponent } from './components/joker/joker.component';
 
 const routes: Routes = [{ path: 'isItMonday', component: IsItMondayComponent}, { path: 'main-page',component: HomeComponent},
                         { path: 'playerRater', component: PlayerDashboardComponent}, { path: 'sudoku-solver', component: SudokuComponent},
                         {path: 'curriculum', component: CurriculumComponent}, {path: 'quoteguesser', component: PlayerDashboardComponent},
-                        {path: 'game-of-life', component: GameOfLifeComponent},
+                        {path: 'game-of-life', component: GameOfLifeComponent},{path: 'joker', component: JokerComponent},
                         {path: '', redirectTo: 'main-page', pathMatch: 'full'}
                        ];
 

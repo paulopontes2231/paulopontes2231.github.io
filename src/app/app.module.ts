@@ -28,6 +28,11 @@ import { SkillComponent } from './components/skill/skill.component';
 import { ProjectComponent } from "./components/project/project.component";
 import { JobComponent } from './components/job/job.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { JokerComponent } from './components/joker/joker.component';
+import { OptionComponent } from './components/joker/option/option.component';
+import { LifelinesComponent } from './components/joker/lifelines/lifelines.component';
+import { LevelsComponent } from './components/joker/levels/levels.component';
+import { QuestionComponent } from './components/joker/question/question.component';
 
 
 @NgModule({
@@ -49,6 +54,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CurriculumComponent,
     GameOfLifeComponent,
     SkillComponent,
+    JokerComponent,
+    OptionComponent,
+    LifelinesComponent,
+    LevelsComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

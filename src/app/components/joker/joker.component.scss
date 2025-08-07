@@ -1,0 +1,28 @@
+@import '../../../styles.scss';
+
+.coat{
+    background-color: $base-color;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+        width: 1200px;
+    margin-inline: auto;    
+}
+
+.optionDiv{
+   display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+  gap: 10px; /* space between items */
+  width: fit-content; /* shrink-wrap the grid if needed */
+}
+
+app-levels{
+    margin-left: auto;
+}
+
+app-lifelines{
+    margin-right: auto;
+}
