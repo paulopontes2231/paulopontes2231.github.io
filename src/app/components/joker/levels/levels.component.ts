@@ -9,11 +9,11 @@ export class LevelsComponent {
   levels = [{value:250, active: true}, {value:500, active: true}, {value:1000, active: true},
      {value:2000, active: true}, {value:5000, active: false}, {value:10000, active: false}, {value:25000, active: false}, {value:50000, active: false}]
 
-  isDesktop = window.innerWidth >= 650;
+  isDesktop = window.innerWidth > 690;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.isDesktop = event.target.innerWidth >= 650;
+    this.isDesktop = event.target.innerWidth > 690;
   }
 
   findLastActive() : number{

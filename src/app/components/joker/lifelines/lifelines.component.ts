@@ -8,11 +8,11 @@ import { Component, HostListener } from '@angular/core';
 export class LifelinesComponent {
   lifelines = [false, true, true, true, true, true, true, true]
 
-  isDesktop = window.innerWidth >= 650;
+  isDesktop = window.innerWidth > 690;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.isDesktop = event.target.innerWidth >= 650;
+    this.isDesktop = event.target.innerWidth > 690;
   }
 
   activeLifelineCount(): number {
