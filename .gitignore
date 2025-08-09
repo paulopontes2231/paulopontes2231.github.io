@@ -41,4 +41,4 @@ proxy.conf.json
 # System files
 .DS_Store
 Thumbs.db
-src/environments/environment.prod.ts
+src/environments/

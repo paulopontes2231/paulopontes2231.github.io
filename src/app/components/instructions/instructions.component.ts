@@ -71,8 +71,7 @@ export class InstructionsComponent {
           parseInt(line[41]),
           parseInt(line[42]),
         )
-        console.log(player)
-         player.ratings = this.playerRating(player);
+        player.ratings = this.playerRating(player);
         playerList.push(player)
       }
 
@@ -82,7 +81,7 @@ export class InstructionsComponent {
     )
   }
 
-  fullBackRating(player:any) {
+  fullBackRating(player: any) {
     let crossing = player.crossing * 0.08
     let dribbling = player.dribbling * 0.08
     let firstTouch = player.firstTouch * 0.05
@@ -105,7 +104,7 @@ export class InstructionsComponent {
       + composure + anticipation + technique + tackling + passing + firstTouch + dribbling + crossing;
   }
 
-  centerBackRating(player:any) {
+  centerBackRating(player: any) {
     let heading = player.heading * 0.08
     let marking = player.marking * 0.1
     let firstTouch = player.firstTouch * 0.05
@@ -127,7 +126,7 @@ export class InstructionsComponent {
       composure + anticipation + technique + tackling + passing + firstTouch + jumpingReach + strength;
   }
 
-  halfBackRating(player:any) {
+  halfBackRating(player: any) {
     let heading = player.heading * 0.04
     let marking = player.marking * 0.1
     let passing = player.passing * 0.06
@@ -147,7 +146,7 @@ export class InstructionsComponent {
       + teamWork + decisions + composure + anticipation + stamina + tackling + passing + strength;
   }
 
-  playMakerRating(player:any) {
+  playMakerRating(player: any) {
     let firstTouch = player.firstTouch * 0.11
     let passing = player.passing * 0.13
     let technique = player.technique * 0.11
@@ -163,7 +162,7 @@ export class InstructionsComponent {
       + decisions + offBall + workRate + teamWork + vision + balance;
   }
 
-  b2bRating(player:any) {
+  b2bRating(player: any) {
     let dribbling = player.dribbling * 0.04
     let finishing = player.finishing * 0.03
     let firstTouch = player.firstTouch * 0.05
@@ -188,7 +187,7 @@ export class InstructionsComponent {
       balance + finishing + longshots + tackling + aggression + positioning + acceleration + pace + stamina + strength;
   }
 
-  centerMidAttackingRating(player:any) {
+  centerMidAttackingRating(player: any) {
     let dribbling = player.dribbling * 0.1
     let finishing = player.finishing * 0.04
     let firstTouch = player.firstTouch * 0.06
@@ -209,7 +208,7 @@ export class InstructionsComponent {
       workRate + flair + dribbling + balance + finishing + longshots + vision + acceleration + stamina;
   }
 
-  insideForwardRating(player:any) {
+  insideForwardRating(player: any) {
     let dribbling = player.dribbling * 0.0875
     let finishing = player.finishing * 0.0875
     let firstTouch = player.firstTouch * 0.0875
@@ -228,7 +227,7 @@ export class InstructionsComponent {
       + offBall + pace + flair + dribbling + balance + finishing + longshots + acceleration;
   }
 
-  wingerRating(player:any) {
+  wingerRating(player: any) {
     let crossing = player.crossing * 0.12
     let dribbling = player.dribbling * 0.12
     let firstTouch = player.firstTouch * 0.06
@@ -244,7 +243,7 @@ export class InstructionsComponent {
       + crossing + agility + offBall + pace + flair + dribbling + acceleration;
   }
 
-  strikerRating(player:any) {
+  strikerRating(player: any) {
     let dribbling = player.dribbling * 0.0875
     let finishing = player.finishing * 0.0875
     let firstTouch = player.firstTouch * 0.0875
@@ -264,7 +263,7 @@ export class InstructionsComponent {
       + pace + balance + dribbling + acceleration + workRate + decisions + composure + finishing;
   }
 
-  completeStrikerRating(player:any) {
+  completeStrikerRating(player: any) {
     let dribbling = player.dribbling * 0.068
     let finishing = player.finishing * 0.068
     let firstTouch = player.firstTouch * 0.068
@@ -291,7 +290,7 @@ export class InstructionsComponent {
   }
 
 
-  playerRating(player:any) {
+  playerRating(player: any) {
     var MIN_RATING = 6
     let ratings: any = []
     if (this.fullBackRating(player) >= MIN_RATING) {

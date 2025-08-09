@@ -74,7 +74,6 @@ export class SudokuComponent {
   }
 
   isGridAllZeros(grid: any): boolean {
-    console.log(grid.text)
     for (let i = 0; i < grid.text.length; i++) {
       for (let j = 0; j < grid.text[i].length; j++) {
         if (grid.text[i][j].value !== 0) {

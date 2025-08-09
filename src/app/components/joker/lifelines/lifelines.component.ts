@@ -1,14 +1,27 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { JokerService } from 'src/app/services/joker.service';
 
 @Component({
   selector: 'app-lifelines',
   templateUrl: './lifelines.component.html',
   styleUrl: './lifelines.component.scss'
 })
-export class LifelinesComponent {
-  lifelines = [false, true, true, true, true, true, true, true]
+export class LifelinesComponent implements OnInit {
+  lifelines = [true, true, true, true, true, true, true, true]
+  private subscription!: Subscription;
 
   isDesktop = window.innerWidth > 690;
+
+  constructor(public jokerService: JokerService){}
+
+  ngOnInit(): void {
+    this.subscription = this.jokerService.lifelines.subscribe(lifelines => {
+      if (lifelines) {
+        this.lifelines = lifelines;
+      }
+    });
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

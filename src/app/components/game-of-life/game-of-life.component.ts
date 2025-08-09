@@ -83,7 +83,6 @@ export class GameOfLifeComponent implements OnInit {
   stopGame(): void {
     this.running = false;
     clearInterval(this.interval);
-    console.log("Game stopped");
   }
 
   clear(): void {
