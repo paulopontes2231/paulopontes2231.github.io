@@ -19,7 +19,7 @@ export class JokerService {
     private levelsSource = new BehaviorSubject<Array<Level>>([{ value: 250, active: true }, { value: 500, active: false }, { value: 1000, active: false },
     { value: 2000, active: false }, { value: 5000, active: false }, { value: 10000, active: false }, { value: 25000, active: false }, { value: 50000, active: false }]);
     levels = this.levelsSource.asObservable();
-    private keyString = '1srz+bWsyQPDdyC01J5Vju/MAJFVEZeZsat/W4X8ltdwkfpUwgiDtZhuumAa0EfP'; // must match backend key
+    private keyString = environment.encriptionKey; // must match backend key
 
     constructor(
         private http: HttpClient,
@@ -67,6 +67,7 @@ export class JokerService {
         return this.http.get(`${this.baseURL}?difficulty=${encodeURIComponent(difficulty)}`).subscribe(async res => {
             let question = JSON.parse(JSON.stringify(res))
             const decryptedAnswer = await this.decryptAnswer(question.answer);
+            console.log(decryptedAnswer)
             question.options = this.shuffleArray(question.options);
             this.questionSource.next({ question: question, decryptedAnswer });
         });
