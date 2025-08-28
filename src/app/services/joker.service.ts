@@ -3,6 +3,8 @@ import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { BehaviorSubject } from "rxjs";
 import { Level } from "../entities/iLevel";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { FinishGameComponent } from "../components/joker/finish-game/finish-game.component";
 
 
 @Injectable({ providedIn: 'root' })
@@ -23,12 +25,13 @@ export class JokerService {
 
     constructor(
         private http: HttpClient,
+        public dialog: MatDialog
     ) { }
 
     nextQuestion(result) {
-        if (this.counterSource.value == 12) {
+        if (this.counterSource.value == 3) {
             if (result === "correct") {
-                this.nextLevel()
+
             } else {
                 if (this.findHowManyLifelines() > 0) {
                     this.removeLifelinesWrongAnswer()
@@ -36,6 +39,8 @@ export class JokerService {
                     this.previousLevel()
                 }
             }
+            this.finishGame()
+
             return
         }
 
@@ -55,7 +60,7 @@ export class JokerService {
 
     getQuestion() {
         let difficulty = "Easy"
-        /* if (this.counterSource.value < 5) {
+        if (this.counterSource.value < 5) {
             difficulty = "Easy"
         } else {
             if (this.counterSource.value < 9) {
@@ -63,11 +68,10 @@ export class JokerService {
             } else {
                 difficulty = "Hard"
             }
-        } */
+        }
         return this.http.get(`${this.baseURL}?difficulty=${encodeURIComponent(difficulty)}`).subscribe(async res => {
             let question = JSON.parse(JSON.stringify(res))
             const decryptedAnswer = await this.decryptAnswer(question.answer);
-            console.log(decryptedAnswer)
             question.options = this.shuffleArray(question.options);
             this.questionSource.next({ question: question, decryptedAnswer });
         });
@@ -78,7 +82,25 @@ export class JokerService {
     }
 
     resetCounter() {
-        this.counterSource.next(0);
+        this.counterSource.next(1);
+    }
+
+    resetLifelines() {
+        this.lifelinesSource = new BehaviorSubject<Array<boolean>>([true, true, true, true, true, true, true, true]);
+
+    }
+
+    resetLevels() {
+        this.levelsSource = new BehaviorSubject<Array<Level>>([{ value: 250, active: true }, { value: 500, active: false }, { value: 1000, active: false },
+        { value: 2000, active: false }, { value: 5000, active: false }, { value: 10000, active: false }, { value: 25000, active: false }, { value: 50000, active: false }]);
+    }
+
+    reset() {
+        this.counterSource.next(1);
+        this.lifelinesSource.next([true, true, true, true, true, true, true, true]); // spread to avoid mutations
+        this.levelsSource.next([{ value: 250, active: true }, { value: 500, active: false }, { value: 1000, active: false },
+        { value: 2000, active: false }, { value: 5000, active: false }, { value: 10000, active: false }, { value: 25000, active: false }, { value: 50000, active: false }]); // deep copy
+        this.getQuestion()
     }
 
     shuffleArray(arr) {
@@ -156,5 +178,24 @@ export class JokerService {
             }
         }
         return counter;
+    }
+
+    finishGame() {
+        const dialogConfig = new MatDialogConfig();
+        dialogConfig.width = '80%'
+        dialogConfig.minHeight = '700px'
+        dialogConfig.autoFocus = false
+        
+
+        const dialogRef = this.dialog.open(FinishGameComponent, {
+           data:  this.levels
+
+        }  );
+
+
+
+        dialogRef.afterClosed().subscribe(result => {
+            this.reset()
+        });
     }
 }
