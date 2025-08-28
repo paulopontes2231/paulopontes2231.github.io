@@ -29,7 +29,7 @@ export class JokerService {
     ) { }
 
     nextQuestion(result) {
-        if (this.counterSource.value == 3) {
+        if (this.counterSource.value == 12) {
             if (result === "correct") {
 
             } else {
